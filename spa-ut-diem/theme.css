@@ -1,0 +1,5 @@
+/* Màu & font riêng của tiệm (ghi đè style.css) */
+:root{--ivory:#F8F4EA;--paper:#FFFCF4;--sand:#EDE5D2;--stone:#D8CBAE;--moss:#2F4A2A;--moss-2:#3F6237;--deep:#26331F;
+--bronze:#8A5A33;--bronze-2:#D9B98A;--ink:#25291F;--muted:#636557;--wood:#8A5A33;--solid-bg:rgba(248,244,234,.95);
+--serif:"Lora","Be Vietnam Pro",Georgia,serif;--sans:"Be Vietnam Pro",system-ui,sans-serif}
+body{font-size:17px}.hero h1 em{color:#D9B98A}.btn-moss{background:#3F6237}.btn-moss:hover{background:#2F4A2A}.why{background:#EEF0E3}

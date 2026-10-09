@@ -1,0 +1,5 @@
+/* Màu & font riêng của tiệm (ghi đè style.css) */
+:root{--ivory:#FBF8F2;--paper:#FFFDF9;--sand:#F2EADB;--stone:#E2D3B8;--moss:#1E1B17;--moss-2:#3A332A;--deep:#1E1B17;
+--bronze:#B8945A;--bronze-2:#E6CFA0;--ink:#24211C;--muted:#6B655B;--wood:#B8945A;--solid-bg:rgba(251,248,242,.95);
+--serif:"Playfair Display","Be Vietnam Pro",Georgia,serif;--sans:"Be Vietnam Pro",system-ui,sans-serif}
+.hero h1 em{color:#E6CFA0}.brand{font-family:"Playfair Display";letter-spacing:.02em}.btn-moss{background:#B8945A}.btn-moss:hover{background:#9A7A45}.why{background:#F5EEE1}

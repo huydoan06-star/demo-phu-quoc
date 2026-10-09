@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Spa Út Diễm – Massage trị liệu Gành Dầu (trang mẫu)</title>
+<meta name="description" content="Spa Út Diễm – Massage trị liệu Gành Dầu (trang mẫu)">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#2F4A2A">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%232D382E'/%3E%3Ccircle cx='32' cy='32' r='14' fill='none' stroke='%23C9A774' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500&family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="theme.css">
+<script>document.documentElement.className="js"</script>
+<script src="config.js"></script>
+<script src="i18n.js"></script>
+<link rel="preload" as="image" id="heroPreload">
+</head>
+<body>
+<div class="demo" id="demoBar" data-i18n="demo"></div>
+
+<header class="site" id="site">
+  <div class="wrap">
+    <a class="brand" href="#top" id="brand"></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#about" data-i18n="nav_about"></a>
+      <a href="#offer" data-i18n="nav_services"></a>
+      <a href="#gallery" data-i18n="nav_gallery"></a>
+      <a href="#visit" data-i18n="nav_visit"></a>
+    </nav>
+    <div class="lang" id="lang">
+      <button type="button" aria-haspopup="true" aria-expanded="false"><svg class="i"><use href="#i-globe"/></svg><span id="langCode">VI</span></button>
+      <ul id="langList"></ul>
+    </div>
+    <a class="btn btn-line hdr-cta cta-main" href="#book" data-i18n="cta_book"></a>
+    <button class="burger" id="burger" type="button" aria-label="Menu"><span></span><span></span></button>
+  </div>
+</header>
+<div class="drawer" id="drawer">
+  <a href="#about" data-i18n="nav_about"></a>
+  <a href="#offer" data-i18n="nav_services"></a>
+  <a href="#gallery" data-i18n="nav_gallery"></a>
+  <a href="#reviews" data-i18n="nav_reviews"></a>
+  <a href="#visit" data-i18n="nav_visit"></a>
+  <a href="#book" class="nav-book" data-i18n="nav_book"></a>
+  <div class="meta" id="drawerMeta"></div>
+</div>
+
+<main id="top">
+  <section class="hero" id="hero" style="padding:0">
+    <picture id="heroPic"></picture>
+    <div class="wrap">
+      <div class="eyebrow" id="eyebrow" data-i18n="eyebrow"></div>
+      <h1 id="heroTitle"></h1>
+      <p class="tag" id="heroTag"></p>
+      <div class="ctas on-dark">
+        <a class="btn btn-ivory cta-main" href="#book" data-i18n="cta_book"></a>
+        <a class="link" href="#offer"><span data-i18n="cta_explore"></span><svg class="i"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="meta"><span class="dot" id="openDot"></span><span id="openTxt"></span></div>
+    </div>
+    <div class="scrollcue" data-i18n="scroll"></div>
+  </section>
+
+  <section id="about"><div class="wrap about">
+    <figure class="rv"><img id="aboutImg" alt="" loading="lazy" width="960" height="1200"></figure>
+    <div class="rv d1">
+      <span class="kicker" data-i18n="about_kicker"></span>
+      <h2 id="aboutTitle"></h2>
+      <div id="aboutText"></div>
+      <div class="sig" id="aboutSig"></div>
+    </div>
+  </div></section>
+
+  <section class="why"><div class="wrap center">
+    <span class="kicker rv" data-i18n="why_kicker"></span>
+    <div class="why-grid" id="whyGrid"></div>
+  </div></section>
+
+  <section id="offer"><div class="wrap">
+    <div class="center rv">
+      <span class="kicker" data-i18n="services_kicker"></span>
+      <h2 data-i18n="services_title"></h2>
+      <p class="note" data-i18n="price_note"></p>
+    </div>
+    <div id="offerBody"></div>
+  </div></section>
+
+  <section id="gallery" style="padding-top:0"><div class="wrap">
+    <div class="center rv">
+      <span class="kicker" data-i18n="gallery_kicker"></span>
+      <h2 data-i18n="gallery_title"></h2>
+    </div>
+    <div class="gal" id="gal"></div>
+  </div></section>
+
+  <section class="reviews" id="reviews"><div class="wrap center">
+    <span class="kicker rv" data-i18n="reviews_kicker"></span>
+    <div id="revBody" class="rv d1"></div>
+  </div></section>
+
+  <section class="visit on-dark" id="visit"><div class="wrap visit-grid">
+    <div class="rv">
+      <span class="kicker" data-i18n="visit_kicker"></span>
+      <h2 data-i18n="visit_title"></h2>
+      <div class="vlist">
+        <div class="vrow"><svg class="i"><use href="#i-clock"/></svg><div><b data-i18n="hours"></b><span id="vHours"></span></div></div>
+        <div class="vrow" id="vAddrRow"><svg class="i"><use href="#i-pin"/></svg><div><b data-i18n="address"></b><span id="vAddr"></span></div></div>
+        <div class="vrow vbr" id="vBranches" hidden></div>
+        <div class="vrow"><svg class="i"><use href="#i-phone"/></svg><div><b data-i18n="phone"></b><span id="vPhone"></span></div></div>
+      </div>
+      <div class="vbtns">
+        <a class="btn btn-ivory" id="dirBtn" target="_blank" rel="noopener"><svg class="i"><use href="#i-compass"/></svg><span data-i18n="directions"></span></a>
+        <a class="btn btn-line" id="callBtn"><svg class="i"><use href="#i-phone"/></svg><span data-i18n="call"></span></a>
+      </div>
+      <div class="dsteps" id="dirSteps" hidden></div>
+      <div class="chats" id="chats"></div>
+      <div class="qr"><img src="qr.png" alt="QR" width="84" height="84" loading="lazy"><span data-i18n="qr_title"></span></div>
+    </div>
+    <div class="mapbox rv d1" id="mapBox"><div class="ph"><svg class="i" style="width:40px;height:40px"><use href="#i-pin"/></svg></div></div>
+  </div></section>
+
+  <section class="book" id="book"><div class="wrap">
+    <div class="center rv">
+      <span class="kicker" data-i18n="book_kicker"></span>
+      <h2 data-i18n="cta_book"></h2>
+      <p class="lead" data-i18n="book_sub"></p>
+    </div>
+    <div class="ticket rv" id="ticket">
+      <div class="t-head">
+        <div class="brand-s" id="tBrand"></div>
+        <h3 data-i18n="book_title"></h3>
+        <div class="ref"><span><span data-i18n="ok_ref"></span> <span id="refNo"></span></span></div>
+      </div>
+      <div id="tInner"></div>
+    </div>
+  </div></section>
+</main>
+
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-grid">
+      <div><div class="brand" id="ftBrand"></div><p id="ftTag"></p></div>
+      <div><h5 data-i18n="footer_contact"></h5><p id="ftPhone"></p><p id="ftAddr"></p></div>
+      <div><h5 data-i18n="hours"></h5><p id="ftHours"></p></div>
+      <div><h5 data-i18n="footer_lang"></h5><div class="langs" id="ftLangs"></div></div>
+    </div>
+    <div class="ft-bot"><span id="ftCopy"></span><span><span data-i18n="footer_demo"></span> · <span data-i18n="footer_photos"></span></span></div>
+  </div>
+  <div class="designer" id="designer" hidden>
+    <div class="wrap">
+      <span class="dz-t" data-i18n="designer_by"></span>
+      <div class="dz-l" id="dzLinks"></div>
+    </div>
+  </div>
+</footer>
+
+<div class="dock" id="dock">
+  <a class="btn call" id="dockCall" aria-label="Call"><svg class="i"><use href="#i-phone"/></svg></a>
+  <a class="btn btn-moss go cta-main" href="#book" data-i18n="cta_book"></a>
+</div>
+
+<!-- Icon nét mảnh (SVG sprite) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.8 3.8 5.8 3.8 9s-1.2 6.2-3.8 9c-2.6-2.8-3.8-5.8-3.8-9S9.4 5.8 12 3z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M3 12h17M14 6l6 6-6 6"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3.5h3.2l1.6 4.2-2.1 1.4a11.5 11.5 0 0 0 7.2 7.2l1.4-2.1 4.2 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.7 2 2 0 0 1 5 3.5z"/></symbol>
+  <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-lotus" viewBox="0 0 48 48"><path d="M24 10c-4 5-5 11-3 17M24 10c4 5 5 11 3 17M24 38c-3-4-4-8-3-11M24 38c3-4 4-8 3-11M24 38c-6 0-12-3-15-10 5-1 9 0 12 3M24 38c6 0 12-3 15-10-5-1-9 0-12 3M6 38h36"/></symbol>
+  <symbol id="i-hands" viewBox="0 0 48 48"><path d="M10 30c4-1 7 0 10 3l5 5M14 22l7 7a3 3 0 0 0 4-4l-6-7c-2-2-4-3-7-3H8M38 30c-4-1-7 0-10 3M34 22l-4 4M40 15h-4c-3 0-5 1-7 3"/><circle cx="24" cy="10" r="3"/></symbol>
+  <symbol id="i-wave" viewBox="0 0 48 48"><path d="M4 30c4 0 4-3 8-3s4 3 8 3 4-3 8-3 4 3 8 3 4-3 8-3M4 37c4 0 4-3 8-3s4 3 8 3 4-3 8-3 4 3 8 3 4-3 8-3"/><circle cx="31" cy="15" r="6"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 48 48"><path d="M10 38C10 20 22 10 40 9c0 18-10 29-28 29zM10 38l18-18"/></symbol>
+  <symbol id="i-fish" viewBox="0 0 48 48"><path d="M6 24c6-8 14-11 22-11s12 5 14 11c-2 6-6 11-14 11S12 32 6 24zM6 24l-3-6M6 24l-3 6"/><circle cx="33" cy="21" r="1.2"/></symbol>
+  <symbol id="i-flame" viewBox="0 0 48 48"><path d="M24 42c-7 0-12-5-12-11 0-8 8-11 8-20 5 3 7 8 7 12 2-1 3-3 3-5 4 3 6 8 6 13 0 6-5 11-12 11z"/><path d="M24 42c-3 0-5-2-5-5 0-3 3-5 4-8 3 2 5 5 5 8s-1 5-4 5z"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 48 48"><path d="M8 32h32M14 32a10 10 0 0 1 20 0M24 12v4M12 18l3 3M36 18l-3 3M6 38h36"/></symbol>
+  <symbol id="i-crab" viewBox="0 0 48 48"><ellipse cx="24" cy="27" rx="11" ry="7.5"/><path d="M13 25l-6-4M13 29l-6 2M14 32l-4 5M35 25l6-4M35 29l6 2M34 32l4 5M17 21c-3-3-5-7-3-11 3 1 4 4 4 7M31 21c3-3 5-7 3-11-3 1-4 4-4 7"/><circle cx="21" cy="24" r=".8"/><circle cx="27" cy="24" r=".8"/></symbol>
+  <symbol id="i-group" viewBox="0 0 48 48"><circle cx="24" cy="15" r="5"/><circle cx="12" cy="19" r="4"/><circle cx="36" cy="19" r="4"/><path d="M14 38c0-6 4-11 10-11s10 5 10 11M4 36c0-5 3-9 8-9 2 0 3 .4 4.5 1.3M44 36c0-5-3-9-8-9-2 0-3 .4-4.5 1.3"/></symbol>
+  <symbol id="i-lantern" viewBox="0 0 48 48"><path d="M24 4v5M18 9h12M18 39h12M24 39v5"/><path d="M18 9c-6 4-8 9-8 15s2 11 8 15M30 9c6 4 8 9 8 15s-2 11-8 15M24 9v30M17 24h14"/></symbol>
+  <symbol id="i-bamboo" viewBox="0 0 48 48"><path d="M20 44V4M20 16h0M17 15h6M17 29h6M30 44V12M27 22h6M27 34h6M20 10c-4-1-7-4-8-7 4 0 7 2 8 5M30 18c4-1 7-4 8-7-4 0-7 2-8 5"/></symbol>
+  <symbol id="i-bowl" viewBox="0 0 48 48"><path d="M6 24h36c0 9-8 15-18 15S6 33 6 24zM18 39l-2 4h16l-2-4M17 18c0-3 3-3 3-6M24 18c0-3 3-3 3-6M31 18c0-3 3-3 3-6"/></symbol>
+  <symbol id="i-car" viewBox="0 0 48 48"><path d="M6 30v-6l5-9h22l7 9h2v6H6zM11 15l3 9h26"/><circle cx="14" cy="31" r="4"/><circle cx="34" cy="31" r="4"/></symbol>
+  <symbol id="i-flower" viewBox="0 0 48 48"><circle cx="24" cy="24" r="3"/><path d="M24 21c-2-5-1-11 4-15 3 5 1 11-4 15zM27 24c5-2 11-1 15 4-5 3-11 1-15-4zM24 27c2 5 1 11-4 15-3-5-1-11 4-15zM21 24c-5 2-11 1-15-4 5-3 11-1 15 4z"/></symbol>
+  <symbol id="i-barrel" viewBox="0 0 48 48"><path d="M13 6h22c3 6 3 30 0 36H13c-3-6-3-30 0-36zM11 14h26M11 34h26M10 24h28"/></symbol>
+  <symbol id="i-pepper" viewBox="0 0 48 48"><circle cx="18" cy="20" r="4"/><circle cx="28" cy="16" r="4"/><circle cx="25" cy="27" r="4"/><circle cx="34" cy="26" r="4"/><circle cx="20" cy="33" r="4"/><path d="M28 12c1-4 4-6 8-6"/></symbol>
+  <symbol id="i-cup" viewBox="0 0 48 48"><path d="M10 18h24v10a10 10 0 0 1-10 10h-4a10 10 0 0 1-10-10V18zM34 21h3a4 4 0 0 1 0 8h-3M8 42h30M18 13c0-3 3-3 3-6M25 13c0-3 3-3 3-6"/></symbol>
+  <symbol id="i-route" viewBox="0 0 48 48"><circle cx="12" cy="38" r="4"/><path d="M36 22s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="36" cy="11" r="2"/><path d="M16 38h12a6 6 0 0 0 0-12h-8a6 6 0 0 1 0-12h4"/></symbol>
+  <symbol id="i-gift" viewBox="0 0 48 48"><path d="M8 18h32v8H8zM10 26h28v16H10zM24 18v24M24 18c-3-6-10-8-11-4s6 4 11 4c3-6 10-8 11-4s-6 4-11 4"/></symbol>
+  <symbol id="i-orn" viewBox="0 0 120 12"><path d="M0 6h48M72 6h48M60 1l5 5-5 5-5-5z"/></symbol>
+</svg>
+
+<script src="app.js"></script>
+</body>
+</html>
