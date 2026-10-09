@@ -10,8 +10,8 @@ window.DV = {
     vi: "Khách mở Google Maps là thấy tiệm mình đẹp, đúng và dễ tìm.",
     en: "When guests open Google Maps, your shop looks good, accurate and easy to find."
   },
-  // Dòng giá dưới câu phụ đầu trang. ĐỂ TRỐNG ("") = ẨN dòng. Chưa duyệt giá thì để trống.
-  price: { vi: "", en: "" },
+  // Dòng giá dưới câu phụ đầu trang (Đại nhân chốt 09/10/2026). ĐỂ TRỐNG ("") = ẨN dòng.
+  price: { vi: "990.000đ/tháng · Tháng đầu làm xong mới thu tiền · Nghỉ lúc nào cũng được", en: "990,000 VND/month · First month paid after the work is done · Cancel anytime" },
   replyTime: { vi: "trong ngày", en: "within the day" },   // dòng nhỏ dưới QR; đặt null để ẩn
   weeklySlots: 5                            // "Mỗi tuần em nhận N tiệm"; đặt 0 để ẩn
 };
