@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Chăm sóc Google Maps cho tiệm ở Phú Quốc – gói tháng, làm online</title>
+<meta name="description" content="Sửa giờ, địa chỉ, ghim; đưa menu – bảng giá; đăng ảnh và bài hàng tuần; trả lời đánh giá đúng tiếng khách (chủ duyệt); trang đặt lịch đa ngôn ngữ kèm QR; báo cáo tháng. Nhận bản đọc đánh giá Maps miễn phí qua Zalo.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:title" content="Chăm sóc Google Maps cho tiệm ở Phú Quốc">
+<meta property="og:description" content="Gói tháng làm hoàn toàn online: giờ – địa chỉ – ghim, menu – bảng giá, ảnh và bài hàng tuần, trả lời đánh giá đúng tiếng khách, báo cáo tháng. Nhận bản đọc đánh giá Maps miễn phí.">
+<meta property="og:url" content="https://huydoan06-star.github.io/demo-phu-quoc/dich-vu/">
+<meta property="og:image" content="https://huydoan06-star.github.io/demo-phu-quoc/dich-vu/og.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Chăm sóc Google Maps cho tiệm ở Phú Quốc – nhận bản đọc đánh giá miễn phí qua Zalo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1E2620">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+:root{--ivory:#F6F1E8;--paper:#FBF8F2;--sand:#ECE3D4;--stone:#D9CDBA;--moss:#2D382E;--deep:#1E2620;--bronze:#A27C45;--bronze-2:#C9A774;--ink:#23211D;--muted:#6E685E;--line:rgba(35,33,29,.13);--red:#B4462F;--green:#2E7D32;
+--serif:"Cormorant Garamond",Georgia,serif;--sans:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.65 var(--sans);-webkit-text-size-adjust:100%}
+a{color:inherit}img{max-width:100%;display:block}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.k{font:500 11px/1.4 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--bronze)}
+h1,h2,h3{font-family:var(--serif);font-weight:500;color:var(--deep);margin:0}
+h1{font-size:clamp(38px,9.6vw,68px);line-height:1.04;letter-spacing:-.01em}h1 em{color:var(--bronze);font-style:italic}
+h2{font-size:clamp(32px,7.4vw,48px);line-height:1.08;margin:10px 0 14px}
+h3{font-size:24px;line-height:1.2}
+.lead{color:var(--muted);font-size:17px;max-width:620px}
+section{padding:68px 0;border-top:1px solid var(--line)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:14px 22px;font:500 15px/1.25 var(--sans);text-decoration:none;border:1px solid transparent;text-align:center}
+.btn.pri{background:var(--bronze);color:#fff}.btn.pri:hover{background:#8e6c3b}
+.btn.ghost{border-color:var(--stone);color:var(--deep)}
+.btn svg{width:20px;height:20px;flex:0 0 20px}
+.tag{display:inline-block;background:var(--red);color:#fff;font:600 10.5px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;padding:6px 9px}
+/* top */
+.top{position:sticky;top:0;z-index:30;background:rgba(251,248,242,.92);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{display:flex;align-items:center;gap:10px;font:500 20px/1 var(--serif);color:var(--deep);text-decoration:none}
+.brand svg{width:26px;height:26px;color:var(--bronze)}
+.lang{display:flex;border:1px solid var(--stone)}.lang button{border:0;background:none;padding:8px 12px;font:500 12px var(--sans);letter-spacing:.1em;color:var(--muted);cursor:pointer}.lang button.on{background:var(--deep);color:var(--ivory)}
+/* hero */
+.hero{padding:44px 0 60px;background:radial-gradient(120% 70% at 100% 0,#efe4d0 0,transparent 60%)}
+.hero .grid{display:grid;gap:40px}
+.hero p.lead{margin:18px 0 26px}
+.ctas{display:flex;flex-direction:column;gap:10px;max-width:440px}
+.trust{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:22px;font-size:13.5px;color:var(--muted)}.trust span::before{content:"✓ ";color:var(--bronze)}
+/* maps mock */
+.phone{background:#fff;border:1px solid var(--line);box-shadow:0 24px 60px rgba(30,38,32,.14);max-width:360px;width:100%;margin:0 auto;font-family:Roboto,Arial,var(--sans);font-size:13.5px;line-height:1.45;color:#202124;overflow:hidden}
+.mapbg{height:118px;background:linear-gradient(135deg,#e8eef0 25%,#dfe7e2 25% 50%,#e8eef0 50% 75%,#dfe7e2 75%);background-size:46px 46px;position:relative}
+.mapbg::after{content:"";position:absolute;left:0;right:0;top:56px;height:10px;background:#fff;transform:rotate(-8deg)}
+.pin{position:absolute;width:26px;height:26px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:#EA4335;z-index:2}
+.pin::after{content:"";position:absolute;inset:8px;border-radius:50%;background:#fff}
+.pc{padding:14px 16px 16px}.pc .nm{font-size:19px;color:#202124;margin:0 0 2px;font-family:Roboto,Arial,sans-serif}
+.stars{color:#E7A33E;letter-spacing:1px}.mut{color:#70757a}
+.row{display:flex;gap:10px;align-items:flex-start;padding:7px 0;border-top:1px solid #eee}.row b{font-weight:500}
+.ico{width:18px;flex:0 0 18px;text-align:center;color:#1a73e8}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}.chips span{border:1px solid #dadce0;border-radius:16px;padding:4px 10px;font-size:12.5px;color:#1a73e8}
+.ph{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin:8px 0}.ph i{aspect-ratio:1;display:block;border-radius:4px}
+.bad{color:#d93025}.good{color:#188038}
+.rv{background:#f8f9fa;border-radius:8px;padding:9px 11px;margin-top:6px;font-size:12.8px}.rv .own{border-left:2px solid #1a73e8;padding-left:8px;margin-top:6px;color:#3c4043}
+/* services */
+.svc{display:grid;gap:12px;margin-top:28px}
+.svc article{background:#fff;border:1px solid var(--line);padding:20px 20px 18px;display:grid;grid-template-columns:44px 1fr;gap:4px 14px}
+.svc .n{grid-row:span 2;width:44px;height:44px;border:1px solid var(--bronze-2);display:grid;place-items:center;font:500 20px var(--serif);color:var(--bronze)}
+.svc h3{font-size:22px}.svc p{margin:0;color:var(--muted);font-size:15px}
+/* before after */
+.ba{display:grid;gap:28px;margin-top:28px}
+.ba .col h3{display:flex;align-items:center;gap:10px;margin-bottom:12px}.ba .col h3 small{font:500 11px var(--sans);letter-spacing:.14em;text-transform:uppercase;padding:5px 8px}
+.ba .before h3 small{background:#f3dcd6;color:var(--red)}.ba .after h3 small{background:#dcebd9;color:var(--green)}
+.note{font-size:13px;color:var(--muted);margin-top:12px}
+/* report */
+.rep{display:grid;gap:28px;align-items:start}
+.rep figure{margin:0;position:relative;background:#fff;border:1px solid var(--line);box-shadow:0 20px 50px rgba(30,38,32,.12);padding:10px}
+.rep figure .tag{position:absolute;top:-10px;left:-6px}
+.ul{list-style:none;padding:0;margin:18px 0 0}.ul li{padding:10px 0 10px 30px;border-bottom:1px solid var(--line);position:relative}.ul li::before{content:"";position:absolute;left:2px;top:19px;width:14px;height:1px;background:var(--bronze)}
+/* demos */
+.demos{display:grid;gap:14px;margin-top:26px}
+.demo{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:22px;background:var(--deep);color:var(--ivory);text-decoration:none}
+.demo h3{color:var(--ivory)}.demo p{margin:4px 0 0;font-size:14px;color:#cfc6b6}.demo span.ar{font-size:26px;color:var(--bronze-2)}
+/* steps */
+.steps{counter-reset:s;display:grid;gap:0;margin-top:24px}
+.steps li{list-style:none;counter-increment:s;padding:16px 0 16px 58px;position:relative;border-bottom:1px solid var(--line)}
+.steps li::before{content:counter(s,decimal-leading-zero);position:absolute;left:0;top:12px;font:500 30px/1 var(--serif);color:var(--bronze)}
+.steps b{display:block;font-weight:500;color:var(--deep)}.steps span{color:var(--muted);font-size:15px}
+/* owner + promise */
+.own-box{background:var(--deep);color:var(--ivory);padding:30px 24px}
+.own-box h2{color:var(--ivory)}.own-box p{color:#d6cdbd}
+.pr{display:grid;gap:12px;margin-top:22px}
+.pr div{border:1px solid var(--line);background:#fff;padding:18px 20px;display:flex;gap:14px}
+.pr div::before{content:"✕";color:var(--red);font-weight:600}.pr div.ok::before{content:"✓";color:var(--green)}
+.pr b{font-weight:500;display:block}.pr span{color:var(--muted);font-size:14.5px}
+/* price + cta */
+.price{background:var(--ivory);text-align:center}
+.price .big{font:500 clamp(28px,7vw,42px)/1.15 var(--serif);color:var(--deep);margin:10px auto 8px;max-width:700px}
+.final{background:var(--deep);color:var(--ivory);text-align:center;border:0}
+.final h2{color:var(--ivory)}.final p{color:#d6cdbd;margin:0 auto 22px;max-width:520px}
+.qr{width:180px;margin:22px auto 8px;background:var(--paper);padding:8px}
+.final small{color:#a89f90}
+footer{background:#161c17;color:#a89f90;font-size:13px;padding:24px 0 100px;text-align:center}
+.dock{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:40;transform:translateY(160%);transition:transform .4s}
+.dock.show{transform:none}.dock .btn{width:100%;box-shadow:0 12px 30px rgba(30,38,32,.25)}
+@media(min-width:760px){
+ .wrap{padding:0 36px}section{padding:96px 0}
+ .hero{padding:80px 0 96px}.hero .grid{grid-template-columns:1.2fr .8fr;align-items:center}
+ .ctas{flex-direction:row;max-width:none}
+ .svc{grid-template-columns:1fr 1fr}.ba{grid-template-columns:1fr 1fr}.rep{grid-template-columns:.9fr 1.1fr}.demos{grid-template-columns:1fr 1fr}.pr{grid-template-columns:1fr 1fr}
+ .own-box{padding:48px}.dock{display:none}footer{padding-bottom:28px}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute"><symbol id="zl" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M4 5.5h16v10.5H10l-4.5 3.5V16H4z"/><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M8 9.5h8M8 12.5h5"/></symbol>
+<symbol id="pinS" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" d="M12 21s-6.5-6.2-6.5-11.2a6.5 6.5 0 0 1 13 0C18.5 14.8 12 21 12 21z"/><circle cx="12" cy="9.8" r="2.4" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol></svg>
+
+<header class="top"><div class="wrap">
+ <a class="brand" href="#"><svg><use href="#pinS"/></svg><span data-en="Maps care · Phu Quoc">Chăm sóc Maps · Phú Quốc</span></a>
+ <div class="lang" role="group" aria-label="Ngôn ngữ"><button type="button" data-l="vi" class="on">VI</button><button type="button" data-l="en">EN</button></div>
+</div></header>
+
+<main>
+<div class="hero"><div class="wrap grid">
+ <div>
+  <div class="k" data-en="Monthly plan · done fully online">Gói tháng · làm hoàn toàn online</div>
+  <h1 style="margin-top:14px" data-en="Your Google Maps profile, <em>cared for every month</em>">Hồ sơ Google Maps của tiệm, <em>được chăm mỗi tháng</em></h1>
+  <p class="lead" data-en="For shops, spas, restaurants and homestays in Phu Quoc: correct hours and pin, a clear price list, fresh photos, replies to every review in the guest’s own language — and a one-page report each month.">Dành cho tiệm, spa, nhà hàng, homestay ở Phú Quốc: giờ và ghim đúng, bảng giá rõ, ảnh mới đều đặn, đánh giá nào cũng được trả lời đúng tiếng khách — và mỗi tháng một trang báo cáo dễ hiểu.</p>
+  <div class="ctas">
+   <a class="btn pri zalo" href="https://zalo.me/0337031198" target="_blank" rel="noopener"><svg><use href="#zl"/></svg><span data-en="Get a free Maps review check for your shop">Nhận bản đọc đánh giá Maps miễn phí cho tiệm anh/chị</span></a>
+   <a class="btn ghost" href="#goi" data-en="What’s included">Xem gói gồm gì</a>
+  </div>
+  <div class="trust"><span data-en="You stay the owner">Chủ tiệm giữ quyền chủ</span><span data-en="Owner approves every reply">Chủ duyệt từng câu trả lời</span><span data-en="No fake reviews">Không đánh giá ảo</span></div>
+ </div>
+ <div class="phone" aria-hidden="true">
+  <div class="mapbg"><span class="pin" style="left:46%;top:40px"></span></div>
+  <div class="pc"><p class="nm">Spa Mẫu</p><div><b>4,6</b> <span class="stars">★★★★★</span> <span class="mut">(238) · Spa</span></div>
+   <div class="chips"><span data-en="Directions">Chỉ đường</span><span data-en="Call">Gọi</span><span data-en="Book">Đặt lịch</span><span>Menu</span></div>
+   <div class="row"><span class="ico">◷</span><span><b class="good" data-en="Open">Đang mở cửa</b> · 09:00–22:00</span></div>
+   <div class="row"><span class="ico">☰</span><span data-en="Price list: 12 treatments">Bảng giá: 12 liệu trình</span></div>
+   <div class="rv">★★★★★ “마사지 정말 좋았어요!”<div class="own" data-en="Owner reply (in Korean): 감사합니다…">Phản hồi của chủ (tiếng Hàn): 감사합니다…</div></div>
+   <p class="note" style="margin:10px 0 0;font-size:11.5px" data-en="Illustration – fictional shop">Minh hoạ – tiệm hư cấu</p></div>
+ </div>
+</div></div>
+
+<section id="goi"><div class="wrap">
+ <div class="k" data-en="The monthly plan">Gói tháng gồm</div>
+ <h2 data-en="Everything guests check before they come">Những thứ khách xem trước khi đến tiệm</h2>
+ <p class="lead" data-en="Done fully online — no need to meet, no need to install anything.">Làm hoàn toàn online — không cần gặp, không cần cài gì trên máy.</p>
+ <div class="svc">
+  <article><span class="n">1</span><h3 data-en="Hours, address, pin">Giờ mở cửa, địa chỉ, ghim</h3><p data-en="Fix wrong info, move the pin to your real entrance, add holiday hours.">Sửa thông tin sai, dời ghim đúng cổng vào, cập nhật giờ ngày lễ.</p></article>
+  <article><span class="n">2</span><h3 data-en="Menu & price list">Menu – bảng giá</h3><p data-en="Put your services/dishes and prices on the profile so guests can decide quickly.">Đưa dịch vụ/món và giá lên hồ sơ để khách quyết định nhanh.</p></article>
+  <article><span class="n">3</span><h3 data-en="Weekly photos & posts">Ảnh và bài đăng hàng tuần</h3><p data-en="Fresh photos and short posts about offers, new items, seasons.">Ảnh mới và bài ngắn về ưu đãi, món/dịch vụ mới, theo mùa.</p></article>
+  <article><span class="n">4</span><h3 data-en="Reviews answered in the guest’s language">Trả lời đánh giá đúng tiếng khách</h3><p data-en="Korean, English, Chinese, Russian… Every reply is drafted, then <b>you approve it</b> before it goes live.">Hàn, Anh, Trung, Nga… Mỗi câu trả lời được soạn sẵn, <b>chủ tiệm duyệt</b> rồi mới đăng.</p></article>
+  <article><span class="n">5</span><h3 data-en="Multilingual menu/booking page + QR">Trang menu/đặt lịch đa ngôn ngữ + QR</h3><p data-en="A neat page in Vietnamese, English, Korean, Chinese, Russian, linked from Maps, with a QR to print at the counter.">Một trang gọn bằng tiếng Việt, Anh, Hàn, Trung, Nga, gắn vào Maps, kèm mã QR in đặt ở quầy.</p></article>
+  <article><span class="n">6</span><h3 data-en="Monthly report">Báo cáo tháng</h3><p data-en="One page: profile views, calls, direction requests, reviews, what was done, what’s next.">Một trang: lượt xem hồ sơ, lượt gọi, lượt hỏi đường, đánh giá, việc đã làm, việc tháng sau.</p></article>
+ </div>
+</div></section>
+
+<section><div class="wrap">
+ <div class="k" data-en="Before & after">Trước và sau</div>
+ <h2 data-en="Same shop, two very different first impressions">Cùng một tiệm, hai ấn tượng đầu rất khác</h2>
+ <div class="ba">
+  <div class="col before"><h3><small data-en="Before">Trước</small><span data-en="Profile left alone">Hồ sơ bỏ ngỏ</span></h3>
+   <div class="phone"><div class="mapbg"><span class="pin" style="left:20%;top:70px;background:#9aa0a6"></span></div>
+    <div class="pc"><p class="nm">Spa Mẫu</p><div><b>4,1</b> <span class="stars">★★★★</span><span class="mut">☆ (41)</span></div>
+     <div class="row"><span class="ico">◷</span><span class="bad" data-en="Hours not set">Chưa có giờ mở cửa</span></div>
+     <div class="row"><span class="ico">⌖</span><span class="bad" data-en="Pin off from the entrance">Ghim lệch cổng vào</span></div>
+     <div class="row"><span class="ico">☰</span><span class="mut" data-en="No menu or prices">Không có menu, không có giá</span></div>
+     <div class="ph"><i style="background:#cfd3d6"></i><i style="background:#c3c8cb"></i><i style="background:#d9dcde"></i></div>
+     <div class="rv">★★ “Couldn’t find the place, no answer on the phone.”<div class="own bad" style="border-color:#d93025" data-en="No reply">Chưa trả lời</div></div></div></div>
+  </div>
+  <div class="col after"><h3><small data-en="After">Sau</small><span data-en="Profile cared for">Hồ sơ được chăm</span></h3>
+   <div class="phone"><div class="mapbg"><span class="pin" style="left:46%;top:40px"></span></div>
+    <div class="pc"><p class="nm">Spa Mẫu</p><div><b>4,6</b> <span class="stars">★★★★★</span> <span class="mut">(238)</span></div>
+     <div class="row"><span class="ico">◷</span><span><b class="good" data-en="Open">Đang mở cửa</b> · 09:00–22:00</span></div>
+     <div class="row"><span class="ico">⌖</span><span data-en="Pin at the main gate · photo of the entrance">Ghim đúng cổng · có ảnh lối vào</span></div>
+     <div class="row"><span class="ico">☰</span><span data-en="Price list · booking page in 5 languages">Bảng giá · trang đặt lịch 5 thứ tiếng</span></div>
+     <div class="ph"><i style="background:linear-gradient(135deg,#a27c45,#e8d6b4)"></i><i style="background:linear-gradient(135deg,#2d382e,#7f9481)"></i><i style="background:linear-gradient(135deg,#c9a774,#f6f1e8)"></i></div>
+     <div class="rv">★★★★★ “Отличный массаж, спасибо!”<div class="own" data-en="Owner reply in Russian, approved by the owner">Chủ trả lời bằng tiếng Nga, đã duyệt</div></div></div></div>
+  </div>
+ </div>
+ <p class="note" data-en="Illustration drawn for this page — fictional shop, not real data or screenshots.">Hình minh hoạ tự vẽ — tiệm hư cấu, không phải số liệu hay ảnh chụp thật.</p>
+</div></section>
+
+<section><div class="wrap rep">
+ <figure><span class="tag" data-en="Sample figures">Số liệu minh hoạ</span><img src="bao-cao-mau.webp" width="1100" height="1556" decoding="async" alt="Mẫu báo cáo tháng Google Maps – số liệu minh hoạ"></figure>
+ <div><div class="k" data-en="Monthly report">Báo cáo tháng</div>
+  <h2 data-en="One page, sent to your Zalo">Một trang, gửi qua Zalo</h2>
+  <p class="lead" data-en="Easy to read on the phone, no tech terms. Numbers come from your Google Business Profile performance page.">Đọc dễ trên điện thoại, không thuật ngữ. Số lấy từ mục Hiệu suất trong hồ sơ Google của tiệm.</p>
+  <ul class="ul">
+   <li data-en="Profile views on Google Search and Maps, this month vs last month">Lượt xem hồ sơ trên Google Tìm kiếm và Maps, so với tháng trước</li>
+   <li data-en="Calls, direction requests, website clicks">Lượt gọi, lượt hỏi đường, lượt bấm vào trang web</li>
+   <li data-en="New reviews, rating, what guests praise and complain about">Đánh giá mới, điểm sao, khách khen gì – chê gì</li>
+   <li data-en="What was done this month and suggestions for next month">Việc đã làm trong tháng và đề xuất tháng sau</li>
+  </ul></div>
+</div></section>
+
+<section><div class="wrap">
+ <div class="k" data-en="Sample pages">Trang mẫu</div>
+ <h2 data-en="See a multilingual menu/booking page">Xem thử trang menu/đặt lịch đa ngôn ngữ</h2>
+ <p class="lead" data-en="Two sample pages with fictional content — open them on your phone and switch languages.">Hai trang mẫu với nội dung giả định — mở trên điện thoại và thử đổi ngôn ngữ.</p>
+ <div class="demos">
+  <a class="demo" href="../spa/"><div><h3 data-en="Sample spa">Spa mẫu</h3><p data-en="Treatments, prices, booking, voice interpreter">Liệu trình, giá, đặt lịch, phiên dịch giọng nói</p></div><span class="ar">→</span></a>
+  <a class="demo" href="../nha-hang/"><div><h3 data-en="Sample restaurant">Nhà hàng mẫu</h3><p data-en="Menu with prices, table booking">Menu có giá, đặt bàn</p></div><span class="ar">→</span></a>
+ </div>
+</div></section>
+
+<section><div class="wrap">
+ <div class="k" data-en="How it works">Cách bắt đầu</div>
+ <h2 data-en="Four simple steps">Bốn bước đơn giản</h2>
+ <ol class="steps">
+  <li><b data-en="Message on Zalo">Nhắn Zalo</b><span data-en="Send the shop name or your Google Maps link.">Gửi tên tiệm hoặc link Google Maps của tiệm.</span></li>
+  <li><b data-en="Free review check">Nhận bản đọc đánh giá miễn phí</b><span data-en="What guests praise, what they complain about, and what on the profile needs fixing.">Khách đang khen gì, chê gì, và hồ sơ đang thiếu/sai chỗ nào.</span></li>
+  <li><b data-en="Quote after reviewing your profile">Báo giá sau khi xem hồ sơ</b><span data-en="Depends on how much work the profile needs. No obligation.">Tuỳ hồ sơ cần làm nhiều hay ít. Không ràng buộc.</span></li>
+  <li><b data-en="Add me as a manager">Thêm làm người quản lý</b><span data-en="You add me as a manager in Google Business Profile; monthly care begins.">Chủ tiệm thêm mình làm người quản lý hồ sơ, bắt đầu chăm hàng tháng.</span></li>
+ </ol>
+</div></section>
+
+<section style="border:0;padding-top:0"><div class="wrap"><div class="own-box">
+ <div class="k" style="color:var(--bronze-2)" data-en="Your profile stays yours">Hồ sơ vẫn là của tiệm</div>
+ <h2 data-en="You keep ownership — remove access anytime">Chủ tiệm giữ quyền chủ — gỡ lúc nào cũng được</h2>
+ <p data-en="I don’t ask for your password or to take over the profile. You simply add me as a manager in Google Business Profile, and you can remove me whenever you want, in a few taps.">Không xin mật khẩu, không xin chuyển quyền chủ. Anh/chị chỉ thêm mình làm người quản lý trong Google Business Profile, và có thể gỡ bất cứ lúc nào chỉ vài thao tác.</p>
+</div></div></section>
+
+<section><div class="wrap">
+ <div class="k" data-en="Commitments">Cam kết</div>
+ <h2 data-en="What I will never do">Những điều mình không làm</h2>
+ <div class="pr">
+  <div><p style="margin:0"><b data-en="No buying or trading gifts for reviews">Không mua đánh giá, không đổi quà lấy đánh giá</b><span data-en="Against Google’s rules and risky for your profile.">Trái quy định của Google và có thể làm hại hồ sơ của tiệm.</span></p></div>
+  <div><p style="margin:0"><b data-en="No promise of “top ranking”">Không hứa “lên top”</b><span data-en="Nobody can guarantee Google’s ranking. I focus on a complete, trustworthy profile.">Không ai đảm bảo được thứ hạng của Google. Mình tập trung làm hồ sơ đầy đủ, đáng tin.</span></p></div>
+  <div class="ok"><p style="margin:0"><b data-en="You approve every reply">Chủ duyệt mọi câu trả lời</b><span data-en="Nothing is posted in your name without your OK.">Không câu nào được đăng dưới tên tiệm khi chủ chưa đồng ý.</span></p></div>
+  <div class="ok"><p style="margin:0"><b data-en="Honest reporting">Báo cáo trung thực</b><span data-en="Numbers taken from Google, shown as they are — up or down.">Số lấy từ Google, tăng hay giảm đều ghi đúng.</span></p></div>
+ </div>
+</div></section>
+
+<section class="price"><div class="wrap">
+ <div class="k" data-en="Price">Chi phí</div>
+ <p class="big" data-en="Quote after reviewing your shop’s profile">Báo giá sau khi xem hồ sơ của tiệm</p>
+ <p class="lead" style="margin:0 auto" data-en="The review check is free and comes with no obligation.">Bản đọc đánh giá là miễn phí và không ràng buộc.</p>
+</div></section>
+
+<section class="final" id="lien-he"><div class="wrap">
+ <div class="k" style="color:var(--bronze-2)" data-en="Free">Miễn phí</div>
+ <h2 data-en="Get a free Maps review check for your shop">Nhận bản đọc đánh giá Maps miễn phí cho tiệm anh/chị</h2>
+ <p data-en="Message on Zalo with your shop name or Maps link. You’ll receive a short summary of what guests are saying and what to fix first.">Nhắn Zalo tên tiệm hoặc link Maps. Anh/chị sẽ nhận bản tóm tắt khách đang nói gì và nên sửa gì trước.</p>
+ <a class="btn pri zalo" href="https://zalo.me/0337031198" target="_blank" rel="noopener"><svg><use href="#zl"/></svg><span data-en="Message on Zalo · 0337 031 198">Nhắn Zalo · 0337 031 198</span></a>
+ <img class="qr" src="zalo-qr.png" width="232" height="232" alt="QR Zalo 0337031198">
+ <small data-en="Scan with Zalo or the phone camera">Quét bằng Zalo hoặc camera điện thoại</small>
+</div></section>
+</main>
+<footer><div class="wrap" data-en="Google Maps profile care · Phu Quoc · Zalo 0337031198<br>Google, Google Maps and Google Business Profile are trademarks of Google LLC. This is an independent service, not affiliated with Google.">Chăm sóc hồ sơ Google Maps · Phú Quốc · Zalo 0337031198<br>Google, Google Maps và Google Business Profile là thương hiệu của Google LLC. Đây là dịch vụ độc lập, không liên kết với Google.</div></footer>
+<div class="dock" id="dock"><a class="btn pri" href="https://zalo.me/0337031198" target="_blank" rel="noopener"><svg><use href="#zl"/></svg><span data-en="Free Maps review check · Zalo">Nhận bản đọc đánh giá miễn phí · Zalo</span></a></div>
+<script>
+(function(){
+ var els=[].slice.call(document.querySelectorAll("[data-en]"));els.forEach(function(e){e._vi=e.innerHTML;});
+ function set(l){els.forEach(function(e){e.innerHTML=l==="en"?e.getAttribute("data-en"):e._vi;});document.documentElement.lang=l;
+  [].forEach.call(document.querySelectorAll(".lang button"),function(b){b.classList.toggle("on",b.dataset.l===l);});
+  try{localStorage.setItem("dv_lang",l);}catch(e){}
+  if(history.replaceState){var u=new URL(location.href);if(l==="en")u.searchParams.set("lang","en");else u.searchParams.delete("lang");history.replaceState(null,"",u);}}
+ document.querySelector(".lang").onclick=function(e){var b=e.target.closest("button");if(b)set(b.dataset.l);};
+ var q=new URLSearchParams(location.search).get("lang"),s=null;try{s=localStorage.getItem("dv_lang");}catch(e){}
+ if(q==="en"||(!q&&s==="en"))set("en");
+ var d=document.getElementById("dock"),f=document.getElementById("lien-he");
+ addEventListener("scroll",function(){var r=f.getBoundingClientRect();d.classList.toggle("show",scrollY>500&&r.top>innerHeight);},{passive:true});
+})();
+</script>
+</body>
+</html>
