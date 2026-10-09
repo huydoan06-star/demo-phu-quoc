@@ -18,9 +18,9 @@ window.SITE_CONFIG = {
   tagline: {
     vi: "Nghi thức chăm sóc chậm rãi giữa đảo ngọc — đá nóng, tinh dầu nhiệt đới và đôi bàn tay tận tâm.",
     en: "Unhurried rituals on the pearl island — warm stones, tropical oils and attentive hands.",
-    ko: "진주섬에서 누리는 느긋한 의식 — 따뜻한 스톤, 열대 오일, 그리고 정성스러운 손길.",
-    zh: "在珍珠岛上慢享疗愈仪式 — 温热石疗、热带精油与用心的双手。",
-    ru: "Неспешные ритуалы на жемчужном острове — тёплые камни, тропические масла и заботливые руки."
+    ko: "푸꾸옥에서 누리는 여유로운 힐링 리추얼 — 따뜻한 스톤, 열대 오일, 그리고 정성 어린 손길.",
+    zh: "在富国岛慢享疗愈时光——温热石疗、热带精油与用心的双手。",
+    ru: "Неспешные спа-ритуалы на Фукуоке — тёплые камни, тропические масла и заботливые руки."
   },
   heroImage: "assets/hero.webp",        // ảnh ngang ≥1920px, webp < 300 KB
   heroImageMobile: "assets/hero-m.webp",// ảnh dọc cho điện thoại (tuỳ chọn)
@@ -82,7 +82,7 @@ window.SITE_CONFIG = {
       name: { vi: "Chăm sóc da mặt", en: "Signature facial", ko: "시그니처 페이셜", zh: "招牌面部护理", ru: "Фирменный уход за лицом" },
       desc: { vi: "Làm sạch, đắp mặt nạ, cấp ẩm sau nắng.", en: "Cleanse, mask and after-sun hydration.", ko: "클렌징, 마스크, 애프터선 수분 케어.", zh: "清洁、面膜、晒后补水。", ru: "Очищение, маска и увлажнение после солнца." } },
     { id: "combo", minutes: 120, price: 650000, image: "assets/svc-combo.webp",
-      name: { vi: "Hành trình thư giãn", en: "Island journey", ko: "아일랜드 저니", zh: "海岛放松之旅", ru: "Островное путешествие" },
+      name: { vi: "Hành trình thư giãn", en: "Island journey", ko: "아일랜드 저니", zh: "海岛放松之旅", ru: "Островной ритуал" },
       desc: { vi: "Body 60' + gội đầu dưỡng sinh + trà thảo mộc.", en: "60-min body massage, herbal hair wash and tea.", ko: "전신 마사지 60분 + 헤드스파 + 허브티.", zh: "全身按摩60分钟 + 养生洗头 + 草本茶。", ru: "Массаж тела 60 мин, мытьё головы и травяной чай." } }
   ],
 
@@ -101,6 +101,11 @@ window.SITE_CONFIG = {
   booking: {
     mode: "local",            // "local" | "worker" (production) | "telegram" (chỉ thử, lộ token)
     workerUrl: "", telegramBotToken: "", telegramChatId: "", maxPeople: 10
+  },
+  // Dải "trang mẫu do … thiết kế" ở chân trang (xoá khối này khi giao web cho tiệm thật)
+  designer: {
+    zalo: { url: "https://zalo.me/0337031198", label: "0337 031 198", qr: "designer-zalo.png" },
+    telegram: { url: "https://t.me/DHUYHEHE", label: "@DHUYHEHE", qr: "designer-telegram.png" }
   },
   publicUrl: "https://huydoan06-star.github.io/demo-phu-quoc/spa/"
 };

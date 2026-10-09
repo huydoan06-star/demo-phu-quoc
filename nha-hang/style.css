@@ -247,7 +247,7 @@ html:lang(ko) .quote p,html:lang(zh-CN) .quote p{font-style:normal;font-size:20p
 .sumtotal{margin-top:16px;padding-top:18px;border-top:1px solid var(--stone);display:flex;justify-content:space-between;align-items:baseline}
 .sumtotal .v{font:500 30px/1 var(--serif)}
 .sumtotal small{display:block;text-align:right;font-size:12.5px;color:var(--muted);margin-top:6px}
-.t-side .btn{width:100%;margin-top:28px}
+.t-side .btn{width:100%;margin-top:28px;line-height:1.45;padding:14px 20px;text-align:center}
 .privacy{font-size:12.5px;color:var(--muted);margin:16px 0 0;line-height:1.55}
 .err{color:#9b3324;font-size:14px;margin:14px 0 0;min-height:1em}
 @media(min-width:900px){.t-body{grid-template-columns:1fr 340px}.t-form{padding:44px 48px 20px}.t-side{padding:44px 36px}.t-side .stick{position:sticky;top:110px}}
@@ -269,6 +269,17 @@ footer.ft{background:var(--deep);color:rgba(246,241,232,.78);padding:84px 0 110p
 .ft .langs button[aria-current=true]{color:var(--bronze-2)}
 .ft-bot{margin-top:60px;padding-top:26px;border-top:1px solid rgba(246,241,232,.12);display:flex;flex-wrap:wrap;gap:10px 30px;justify-content:space-between;font-size:12.5px;color:rgba(246,241,232,.5)}
 @media(min-width:900px){footer.ft{padding-bottom:60px}.ft-grid{grid-template-columns:2fr 1fr 1fr 1fr}}
+
+.designer{margin-top:44px;border-top:1px solid rgba(246,241,232,.12);background:#182019;padding:26px 0}
+.designer .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px 30px}
+.dz-t{font:italic 400 19px/1.3 var(--serif);color:var(--bronze-2)}
+.dz-l{display:flex;flex-wrap:wrap;gap:14px}
+.dz-l a{display:flex;align-items:center;gap:12px;padding:8px 14px 8px 8px;border:1px solid rgba(246,241,232,.16);font-size:13px;color:rgba(246,241,232,.85);transition:border-color .3s var(--ease)}
+.dz-l a:hover{border-color:var(--bronze-2)}
+.dz-l img{width:58px;height:58px}
+.dz-l b{display:block;font:500 10.5px/1.2 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--bronze-2);margin-bottom:3px}
+footer.ft{padding-bottom:0}.ft-bot{margin-bottom:0}
+@media(max-width:999px){.designer{padding-bottom:96px}}
 
 /* ---------- mobile dock ---------- */
 .dock{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:40;display:flex;gap:8px;padding:6px;background:rgba(251,248,242,.92);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border:1px solid var(--line);box-shadow:0 12px 30px rgba(30,38,32,.16);transform:translateY(140%);transition:transform .5s var(--ease)}

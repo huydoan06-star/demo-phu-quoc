@@ -71,7 +71,7 @@ window.SITE_CONFIG = {
   // Món & giá (VÍ DỤ). featured:true + image => hiện ở "Món đặc trưng". unit: ghi chú đơn vị (tuỳ chọn)
   items: [
     { id: "herring", category: "start", price: 145000,
-      name: { vi: "Gỏi cá trích", en: "Herring salad", ko: "청어 샐러드", zh: "鲱鱼沙拉", ru: "Салат из сельди" },
+      name: { vi: "Gỏi cá trích", en: "Herring salad", ko: "청어회 샐러드", zh: "鲜鲱鱼生拌", ru: "Салат из свежей сельди" },
       desc: { vi: "Cá trích tươi, dừa nạo, rau rừng, cuốn bánh tráng.", en: "Fresh herring, grated coconut, wild herbs, rice-paper wraps.", ko: "생청어, 코코넛, 향채를 라이스페이퍼에 싸서.", zh: "鲜鲱鱼、椰丝、山野香草，配米纸卷食。", ru: "Свежая сельдь, кокос, дикие травы, рисовая бумага." } },
     { id: "oysters", category: "start", price: 180000, featured: true, image: "assets/dish-oysters.webp",
       unit: { vi: "6 con", en: "6 pcs", ko: "6개", zh: "6只", ru: "6 шт." },
@@ -85,15 +85,15 @@ window.SITE_CONFIG = {
       name: { vi: "Sò điệp nướng mỡ hành", en: "Scallops, scallion oil", ko: "가리비 파기름 구이", zh: "葱油烤扇贝", ru: "Гребешки с луковым маслом" },
       desc: { vi: "Nướng than, mỡ hành, đậu phộng rang.", en: "Charcoal-grilled with scallion oil and roasted peanuts.", ko: "숯불에 파기름과 볶은 땅콩.", zh: "炭烤，淋葱油、撒花生碎。", ru: "На углях, с луковым маслом и жареным арахисом." } },
     { id: "prawns", category: "grill", price: 240000,
-      name: { vi: "Tôm nướng muối ớt", en: "Chili-salt grilled prawns", ko: "새우 소금고추 구이", zh: "椒盐烤虾", ru: "Креветки с солью и чили" },
+      name: { vi: "Tôm nướng muối ớt", en: "Chili-salt grilled prawns", ko: "소금 칠리 새우구이", zh: "椒盐烤虾", ru: "Креветки с солью и чили" },
       desc: { vi: "Tôm biển, muối ớt, lá chanh.", en: "Sea prawns, chili salt, lime leaf.", ko: "바다새우, 고추 소금, 라임잎.", zh: "海虾、椒盐、青柠叶。", ru: "Морские креветки, соль с чили, лист лайма." } },
     { id: "fish", category: "grill", price: 280000, featured: true, image: "assets/dish-fish.webp",
-      name: { vi: "Cá nướng sa tế", en: "Grilled fish, chili paste", ko: "생선 칠리 구이", zh: "沙茶烤鱼", ru: "Рыба на гриле с пастой чили" },
+      name: { vi: "Cá nướng sa tế", en: "Grilled fish, chili paste", ko: "사테 소스 생선구이", zh: "沙茶烤鱼", ru: "Рыба на гриле с пастой чили" },
       desc: { vi: "Cá biển trong ngày, sa tế, rau thơm.", en: "Catch of the day, house chili paste, fresh herbs.", ko: "당일 생선, 수제 칠리 페이스트, 향채.", zh: "当日海鱼、自制沙茶酱、香草。", ru: "Рыба дня, домашняя паста чили, свежая зелень." } },
     { id: "lobster", category: "main", price: 1250000, featured: true, image: "assets/dish-lobster.webp",
       unit: { vi: "1 con ~500 g", en: "1 lobster ~500 g", ko: "1마리 약 500g", zh: "1只 约500克", ru: "1 шт. ~500 г" },
-      name: { vi: "Tôm hùm sốt bơ tỏi", en: "Lobster, garlic butter", ko: "랍스터 갈릭버터", zh: "蒜香黄油龙虾", ru: "Лобстер в чесночном масле" },
-      desc: { vi: "Tôm hùm bông, bơ tỏi, chanh.", en: "Spiny lobster, garlic butter, lemon.", ko: "닭새우, 갈릭버터, 레몬.", zh: "锦绣龙虾、蒜香黄油、柠檬。", ru: "Колючий лобстер, чесночное масло, лимон." } },
+      name: { vi: "Tôm hùm sốt bơ tỏi", en: "Lobster, garlic butter", ko: "갈릭버터 랍스터", zh: "蒜香黄油龙虾", ru: "Лангуст в чесночном масле" },
+      desc: { vi: "Tôm hùm bông, bơ tỏi, chanh.", en: "Spiny lobster, garlic butter, lemon.", ko: "스파이니 랍스터, 갈릭버터, 레몬.", zh: "锦绣龙虾、蒜香黄油、柠檬。", ru: "Лангуст, чесночное сливочное масло, лимон." } },
     { id: "platter", category: "main", price: 1450000, featured: true, image: "assets/dish-platter.webp",
       unit: { vi: "cho 2–3 người", en: "for 2–3", ko: "2–3인", zh: "2–3人份", ru: "на 2–3 персоны" },
       name: { vi: "Mâm hải sản bờ biển", en: "Seaside seafood platter", ko: "해변 해산물 플래터", zh: "海边海鲜拼盘", ru: "Морское ассорти" },
@@ -109,10 +109,10 @@ window.SITE_CONFIG = {
       name: { vi: "Dừa tươi", en: "Fresh coconut", ko: "생코코넛", zh: "鲜椰子", ru: "Свежий кокос" },
       desc: { vi: "Ướp lạnh, nguyên trái.", en: "Chilled, served whole.", ko: "차갑게, 통째로.", zh: "冰镇整颗。", ru: "Охлаждённый, целиком." } },
     { id: "sim", category: "sweet", price: 90000,
-      name: { vi: "Rượu sim Phú Quốc", en: "Phu Quoc myrtle wine", ko: "푸꾸옥 심 와인", zh: "富国岛桃金娘酒", ru: "Вино из мирта Фукуока" },
+      name: { vi: "Rượu sim Phú Quốc", en: "Phu Quoc myrtle wine", ko: "푸꾸옥 심(머틀) 와인", zh: "富国岛桃金娘酒", ru: "Вино из розового мирта (сим)" },
       desc: { vi: "Đặc sản đảo, theo ly.", en: "Island speciality, by the glass.", ko: "섬 특산주, 잔 단위.", zh: "海岛特产，按杯。", ru: "Островной напиток, по бокалам." } },
     { id: "pudding", category: "sweet", price: 65000,
-      name: { vi: "Chè dừa non", en: "Young coconut pudding", ko: "어린 코코넛 디저트", zh: "嫩椰子甜品", ru: "Десерт из молодого кокоса" },
+      name: { vi: "Chè dừa non", en: "Young coconut pudding", ko: "코코넛 젤리 디저트", zh: "嫩椰子甜品", ru: "Десерт из молодого кокоса" },
       desc: { vi: "Thạch dừa, nước cốt dừa, đá bào.", en: "Coconut jelly, coconut milk, shaved ice.", ko: "코코넛 젤리, 코코넛 밀크, 빙수.", zh: "椰子冻、椰浆、刨冰。", ru: "Кокосовое желе, кокосовое молоко, колотый лёд." } }
   ],
 
@@ -131,6 +131,11 @@ window.SITE_CONFIG = {
   booking: {
     mode: "local",            // "local" | "worker" (production) | "telegram" (chỉ thử, lộ token)
     workerUrl: "", telegramBotToken: "", telegramChatId: "", maxPeople: 30
+  },
+  // Dải "trang mẫu do … thiết kế" ở chân trang (xoá khối này khi giao web cho tiệm thật)
+  designer: {
+    zalo: { url: "https://zalo.me/0337031198", label: "0337 031 198", qr: "designer-zalo.png" },
+    telegram: { url: "https://t.me/DHUYHEHE", label: "@DHUYHEHE", qr: "designer-telegram.png" }
   },
   publicUrl: "https://huydoan06-star.github.io/demo-phu-quoc/nha-hang/"
 };

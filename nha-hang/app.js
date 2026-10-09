@@ -22,6 +22,8 @@ function pad(n){ return String(n).padStart(2,"0"); }
 function iso(d){ return d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate()); }
 function toM(s){ var p=s.split(":"); return +p[0]*60 + +p[1]; }
 function makeRef(){ var d=new Date(); return (C.refPrefix||"BK")+"-"+String(d.getFullYear()).slice(2)+pad(d.getMonth()+1)+pad(d.getDate())+"-"+Math.floor(1000+Math.random()*9000); }
+function guests(n){ if(lang==="ru"){ var m10=n%10,m100=n%100, f=(m10===1&&m100!==11)?"гость":(m10>=2&&m10<=4&&(m100<12||m100>14))?"гостя":"гостей"; return n+" "+f; }
+  return n+(lang==="ko"||lang==="zh"?"":" ")+t("guests_unit"); }
 function itemById(id){ for(var i=0;i<ITEMS.length;i++) if(ITEMS[i].id===id) return ITEMS[i]; return null; }
 function fmtDate(s){ if(!s) return ""; var d=new Date(s+"T12:00:00"); try{ return d.toLocaleDateString(t("_html"),{weekday:"short",day:"numeric",month:"short",year:"numeric"}); }catch(e){ return s; } }
 
@@ -149,6 +151,11 @@ function initStatic(){
   // map lazy
   if(C.mapsEmbed){ var mb=$("#mapBox"), load=function(){ if(mb.querySelector("iframe")) return; mb.insertAdjacentHTML("beforeend",'<iframe title="map" referrerpolicy="no-referrer-when-downgrade" src="'+esc(C.mapsEmbed)+'"></iframe>'); };
     if("IntersectionObserver" in window){ var io=new IntersectionObserver(function(es){ if(es[0].isIntersecting){ load(); io.disconnect(); } },{rootMargin:"400px"}); io.observe(mb); } else load(); }
+  // dải tác giả (tuỳ chọn, config.designer)
+  var dz=C.designer; if(dz&&(dz.zalo||dz.telegram)){ var L=[];
+    if(dz.zalo) L.push('<a target="_blank" rel="noopener" href="'+esc(dz.zalo.url)+'"><img src="'+esc(dz.zalo.qr)+'" alt="QR Zalo" width="58" height="58" loading="lazy"><span><b>Zalo</b>'+esc(dz.zalo.label)+'</span></a>');
+    if(dz.telegram) L.push('<a target="_blank" rel="noopener" href="'+esc(dz.telegram.url)+'"><img src="'+esc(dz.telegram.qr)+'" alt="QR Telegram" width="58" height="58" loading="lazy"><span><b>Telegram</b>'+esc(dz.telegram.label)+'</span></a>');
+    $("#dzLinks").innerHTML=L.join(""); $("#designer").hidden=false; }
   buildForm();
 }
 
@@ -215,7 +222,7 @@ function updateSummary(){
   if(KIND==="spa") rows.push([t("f_service"), r.s?pick(r.s.name):t("sum_empty")]);
   rows.push([t("f_date"), f.date.value?fmtDate(f.date.value):t("sum_empty")]);
   rows.push([t("f_time"), f.time.value||t("sum_empty")]);
-  rows.push([t("f_people"), r.people+" "+t("guests_unit")]);
+  rows.push([t("f_people"), guests(r.people)]);
   if(KIND==="restaurant" && f.occasion && f.occasion.value!=="none") rows.push([t("f_occasion"), t("occ_"+f.occasion.value)]);
   var h=rows.map(function(x){ return '<div class="sumrow"><span class="k">'+esc(x[0])+'</span><span class="d"></span><span class="v">'+esc(x[1])+'</span></div>'; }).join("");
   if(KIND==="spa"){ var tot=r.s?r.s.price*r.people:0; h+='<div class="sumtotal"><span class="k">'+esc(t("total"))+'</span><div><div class="v">'+(tot?vnd(tot):"—")+'</div>'+(tot?'<small>'+usd(tot)+'</small>':'')+'</div></div>'; }
@@ -256,7 +263,7 @@ function submit(e){
 function done(b,isLocal){
   var rows=[[t("ok_ref"),b.ref],[t("f_name"),b.name]];
   if(b.service) rows.push([t("f_service"),pick(itemById(b.service).name)]);
-  rows.push([t("f_date"),fmtDate(b.date)+" · "+b.time],[t("f_people"),b.people+" "+t("guests_unit")]);
+  rows.push([t("f_date"),fmtDate(b.date)+" · "+b.time],[t("f_people"),guests(b.people)]);
   if(b.total) rows.push([t("total"),vnd(b.total)]);
   $("#tInner").innerHTML='<div class="done"><div class="ck">'+icon("check")+'</div><h3>'+esc(t("ok_title"))+'</h3><p>'+esc(t("ok_body"))+'</p>'+
     '<div class="receipt">'+rows.map(function(x){ return '<div class="sumrow"><span class="k">'+esc(x[0])+'</span><span class="d"></span><span class="v">'+esc(x[1])+'</span></div>'; }).join("")+'</div>'+
