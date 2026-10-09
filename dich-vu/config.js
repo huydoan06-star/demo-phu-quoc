@@ -2,7 +2,8 @@
  * Lưu ý: thẻ Open Graph trong <head> của index.html là chữ cố định (Facebook/Zalo không chạy JS);
  * đổi tiêu đề ở đây thì nhớ sửa og:title + og.png nếu muốn ảnh chia sẻ khớp. */
 window.DV = {
-  brand: "Ghim Tiệm",                       // tên thương hiệu (tạm, chưa chốt)
+  // Tên thương hiệu (Đại nhân chốt 09/10/2026)
+  brand: { vi: "Đội chăm sóc Google Maps", en: "Google Maps Care Team" },
   zalo: "0337031198",
   // Tiêu đề lớn đầu trang
   title: {

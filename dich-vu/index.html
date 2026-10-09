@@ -3,16 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Gói tháng chăm sóc Google Maps cho tiệm ở Phú Quốc</title>
+<title>Gói tháng chăm sóc Google Maps cho tiệm ở Phú Quốc | Đội chăm sóc Google Maps</title>
 <meta name="description" content="Em lo hết phần Google Maps cho tiệm: giờ mở cửa, đường đi, bảng giá, trả lời đánh giá. Anh chị chỉ việc đón khách. Nhắn Zalo, em xem Maps tiệm mình miễn phí.">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="Đội chăm sóc Google Maps">
 <meta property="og:locale" content="vi_VN">
 <meta property="og:title" content="Khách mở Google Maps là thấy tiệm mình đẹp, đúng và dễ tìm.">
 <meta property="og:description" content="Gói tháng chăm sóc Google Maps cho tiệm ở Phú Quốc. Em lo hết phần Google Maps cho tiệm: giờ mở cửa, đường đi, bảng giá, trả lời đánh giá. Anh chị chỉ việc đón khách.">
 <meta property="og:url" content="https://huydoan06-star.github.io/demo-phu-quoc/dich-vu/">
-<meta property="og:image" content="https://huydoan06-star.github.io/demo-phu-quoc/dich-vu/og.png?v=3">
+<meta property="og:image" content="https://huydoan06-star.github.io/demo-phu-quoc/dich-vu/og.png?v=4">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Khách mở Google Maps là thấy tiệm mình đẹp, đúng và dễ tìm – nhắn Zalo 0337031198">
+<meta property="og:image:alt" content="Đội chăm sóc Google Maps – Khách mở Google Maps là thấy tiệm mình đẹp, đúng và dễ tìm – nhắn Zalo 0337031198">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#F4EBDD">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,10 +45,10 @@ section{padding:64px 0}
 /* header */
 .top{position:sticky;top:0;z-index:30;background:rgba(251,247,240,.9);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:56px}
-.brand{display:flex;align-items:center;gap:9px;text-decoration:none;color:var(--deep);font:600 17px/1 var(--sans)}
+.brand{display:flex;align-items:center;gap:9px;min-width:0;text-decoration:none;color:var(--deep);font:600 min(16px,3.7vw)/1.2 var(--sans);white-space:nowrap}.brand .mk{flex:0 0 30px}.brand>span:last-child{overflow:hidden;text-overflow:ellipsis}
 .brand .mk{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--deep);color:#E9B17C}.brand .mk svg{width:16px;height:16px}
 .lang{display:flex;border:1px solid rgba(18,50,54,.2);border-radius:999px;padding:3px}
-.lang button{border:0;background:none;padding:6px 11px;border-radius:999px;font:600 12px var(--sans);letter-spacing:.06em;color:var(--muted);cursor:pointer}
+.lang button{border:0;background:none;padding:6px 9px;border-radius:999px;font:600 12px var(--sans);letter-spacing:.06em;color:var(--muted);cursor:pointer}
 .lang button.on{background:var(--deep);color:#fff}
 /* hero */
 .hero{position:relative;overflow:hidden;min-height:calc(100vh - 56px);min-height:calc(100svh - 56px);display:flex;flex-direction:column;justify-content:center;padding:36px 0 150px;background:linear-gradient(180deg,#F8F1E6,#F2E7D6)}
@@ -131,7 +132,7 @@ footer .tm{margin-top:16px;font-size:12px;color:#7F9692}
 </svg>
 
 <header class="top"><div class="wrap">
- <a class="brand" href="#"><span class="mk"><svg><use href="#pinS"/></svg></span><span data-cfg="brand">Ghim Tiệm</span></a>
+ <a class="brand" href="#"><span class="mk"><svg><use href="#pinS"/></svg></span><span data-cfg="brand">Đội chăm sóc Google Maps</span></a>
  <div class="lang" role="group" aria-label="Ngôn ngữ / Language"><button type="button" data-l="vi" class="on">VI</button><button type="button" data-l="en">EN</button></div>
 </div></header>
 
@@ -221,7 +222,7 @@ footer .tm{margin-top:16px;font-size:12px;color:#7F9692}
   <p data-en="I don’t buy reviews, I can’t delete bad reviews, and I don’t promise top ranking.">Em không mua đánh giá, không xoá được đánh giá xấu, không hứa lên top.</p>
  </div>
  <p class="more"><span data-en="See more:">Xem thêm:</span> <a href="../spa/" data-en="sample spa page">trang spa mẫu</a> · <a href="../nha-hang/" data-en="sample restaurant page">trang nhà hàng mẫu</a></p>
- <p class="tm"><span data-cfg="brand">Ghim Tiệm</span> · <span data-en="Google, Google Maps and Google Business Profile are trademarks of Google LLC. Independent service, not affiliated with Google. Illustrations drawn for this page.">Google, Google Maps và Google Business Profile là thương hiệu của Google LLC. Dịch vụ độc lập, không liên kết với Google. Hình minh hoạ tự vẽ.</span></p>
+ <p class="tm"><b data-cfg="brand" style="font-weight:600;color:#D5E0DD">Đội chăm sóc Google Maps</b><br><span data-en="Independent service, not part of or endorsed by Google. Google Maps is a trademark of Google LLC.">Dịch vụ độc lập, không thuộc và không được Google bảo trợ. Google Maps là nhãn hiệu của Google LLC.</span><br><span data-en="Illustrations drawn for this page.">Hình minh hoạ tự vẽ.</span></p>
 </div></footer>
 <div class="dock" id="dock"><a class="btn pri" href="https://zalo.me/0337031198" target="_blank" rel="noopener"><svg><use href="#zl"/></svg><span data-en="Message me on Zalo – free Maps check">Nhắn Zalo, em xem Maps tiệm mình miễn phí</span></a></div>
 <script src="config.js"></script>
@@ -231,13 +232,14 @@ footer .tm{margin-top:16px;font-size:12px;color:#7F9692}
  var els=[].slice.call(document.querySelectorAll("[data-en]"));els.forEach(function(e){e._vi=e.innerHTML;});
  function pick(o,l){return o&&typeof o==="object"?(o[l]||""):"";}
  function cfg(l){
-  [].forEach.call(document.querySelectorAll('[data-cfg="brand"]'),function(e){if(C.brand)e.textContent=C.brand;});
+  var bn=pick(C.brand,l)||pick(C.brand,"vi")||(typeof C.brand==="string"?C.brand:"");
+  [].forEach.call(document.querySelectorAll('[data-cfg="brand"]'),function(e){if(bn)e.textContent=bn;});
   var t=document.querySelector('[data-cfg="title"]'),tt=pick(C.title,l)||pick(C.title,"vi");if(t&&tt)t.textContent=tt;
   var p=document.querySelector('[data-cfg="price"]');if(p)p.textContent=pick(C.price,l);
   var parts=[];if(C.replyTime&&C.replyTime[l])parts.push(l==="en"?"I reply "+C.replyTime.en:"Em trả lời "+C.replyTime.vi);
   if(C.weeklySlots)parts.push(l==="en"?"Taking "+C.weeklySlots+" shops a week":"Mỗi tuần em nhận "+C.weeklySlots+" tiệm");
   [].forEach.call(document.querySelectorAll('[data-cfg="slots"]'),function(e){e.textContent=parts.join(" · ");});
-  document.title=l==="en"?"Monthly Google Maps care for shops in Phu Quoc":"Gói tháng chăm sóc Google Maps cho tiệm ở Phú Quốc";
+  document.title=(l==="en"?"Monthly Google Maps care for shops in Phu Quoc":"Gói tháng chăm sóc Google Maps cho tiệm ở Phú Quốc")+(bn?" | "+bn:"");
  }
  function set(l){L=l;els.forEach(function(e){e.innerHTML=l==="en"?e.getAttribute("data-en"):e._vi;});document.documentElement.lang=l;cfg(l);
   [].forEach.call(document.querySelectorAll(".lang button"),function(b){b.classList.toggle("on",b.dataset.l===l);});
