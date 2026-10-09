@@ -1,0 +1,6 @@
+/* Màu & font riêng của tiệm (ghi đè style.css) */
+:root{--ivory:#FFF8F3;--paper:#FFFCF9;--sand:#FBE9DF;--stone:#F1D3C3;--moss:#2B195C;--moss-2:#3D2780;--deep:#21134A;
+--bronze:#F5683C;--bronze-2:#FFB08F;--ink:#231B3A;--muted:#625C73;--wood:#F5683C;--solid-bg:rgba(255,248,243,.95);
+--serif:"Prata",Georgia,serif;--sans:"Quicksand",system-ui,sans-serif}
+body{font-weight:500}.hero h1{font-weight:400}.hero h1 em{color:#FFB08F}.card h3,.menu-cat h3{color:#2B195C}
+.btn-moss{background:#F5683C}.btn-moss:hover{background:#D9522A}.why{background:#F7EEF3}

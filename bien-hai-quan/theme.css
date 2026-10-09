@@ -1,0 +1,8 @@
+/* Màu & font riêng của tiệm (ghi đè style.css) */
+:root{--ivory:#FFF8EE;--paper:#FFFCF6;--sand:#F4E7D2;--stone:#E2CFB2;--moss:#0E4D64;--moss-2:#13617C;--deep:#0A3242;
+--bronze:#C8281A;--bronze-2:#F2B33D;--ink:#1E2A30;--muted:#5E6A70;--wood:#C8281A;--solid-bg:rgba(255,248,238,.95);
+--serif:"Lobster","Be Vietnam Pro",Georgia,serif;--sans:"Be Vietnam Pro",system-ui,sans-serif}
+h1,h2,h3{font-weight:400}.hero h1{font-weight:400;letter-spacing:0}.hero h1 em{font-style:normal;font-family:"Be Vietnam Pro";font-weight:500;font-size:.32em;letter-spacing:.18em;text-transform:uppercase;color:#F2B33D;display:block;margin-top:14px}
+.card h3,.menu-cat h3{color:#C8281A}.about .sig{font-family:"Be Vietnam Pro";font-style:italic;font-size:15px}.mi .nm{font-family:"Be Vietnam Pro";font-weight:500;font-size:17px}
+.brand{font-family:"Lobster";letter-spacing:.01em}.dz-t{font-family:"Be Vietnam Pro"}.quote p{font-family:"Be Vietnam Pro";font-size:20px;font-style:italic}
+.btn-moss{background:#C8281A}.btn-moss:hover{background:#9E1E12}.why{background:#E9F1F2}

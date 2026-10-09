@@ -1,0 +1,7 @@
+/* Màu & font riêng của tiệm (ghi đè style.css) */
+:root{--ivory:#FBF6EF;--paper:#FFFBF5;--sand:#F3E6D4;--stone:#E0CDB2;--moss:#B5321F;--moss-2:#E74D33;--deep:#1A1414;
+--bronze:#E74D33;--bronze-2:#F5A623;--ink:#221A18;--muted:#6A5E5A;--wood:#B5321F;--solid-bg:rgba(251,246,239,.95);
+--serif:"Roboto Slab","Be Vietnam Pro",Georgia,serif;--sans:"Be Vietnam Pro",system-ui,sans-serif}
+h1,h2,h3{font-weight:500}.hero h1{font-weight:500;letter-spacing:-.01em}.hero h1 em{font-style:normal;color:#F5A623}
+.card h3,.menu-cat h3{color:#B5321F}.mi .nm{font-weight:500}.brand{font-family:"Roboto Slab";font-weight:600}
+.btn-moss{background:#E74D33}.btn-moss:hover{background:#B5321F}.why{background:#F6EADB}

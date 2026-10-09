@@ -1,0 +1,6 @@
+/* Màu & font riêng của tiệm (ghi đè style.css) */
+:root{--ivory:#FBF7F2;--paper:#FFFCF8;--sand:#F4E9E6;--stone:#E6D3CF;--moss:#0E3C53;--moss-2:#165470;--deep:#0B2E40;
+--bronze:#E0457B;--bronze-2:#F4A6C0;--ink:#1C2A33;--muted:#5D6A72;--wood:#E0457B;--solid-bg:rgba(251,247,242,.95);
+--serif:"Cormorant Garamond","Be Vietnam Pro",Georgia,serif;--sans:"Be Vietnam Pro",system-ui,sans-serif}
+.brand{font-family:"Cinzel",serif;letter-spacing:.08em;font-weight:600}.kicker{font-family:"Cinzel","Be Vietnam Pro",serif;letter-spacing:.14em}
+.hero h1 em{color:#F4A6C0}.card h3,.menu-cat h3{color:#0E3C53}.btn-moss{background:#E0457B}.btn-moss:hover{background:#C13466}.why{background:#F6ECEE}
