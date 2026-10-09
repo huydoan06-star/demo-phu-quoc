@@ -3,7 +3,7 @@
    No build step: save, commit, push.
    ========================================================== */
 window.SITE_CONFIG = {
-  brand: "Support",                   // brand name — change freely
+  brand: "Huy Chatbot",                   // brand name — change freely
   tagline: "A 24/7 chatbot for small businesses",
 
   // ---- Contact (real inquiries) ----

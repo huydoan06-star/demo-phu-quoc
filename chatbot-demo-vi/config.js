@@ -3,13 +3,14 @@
    Không cần build: lưu, commit, push.
    ========================================================== */
 window.SITE_CONFIG = {
-  brand: "Support",                   // tên thương hiệu (giống trang EN) — đổi tuỳ ý
+  brand: "Huy Chatbot",               // tên thương hiệu (giống trang EN) — đổi tuỳ ý
   defaultLang: "vi",                  // ngôn ngữ mặc định của chatbot: "vi" | "en"
 
   // ---- Liên hệ thật ----
   contact: {
     zaloName: "Huy Đoàn",
     zaloPhone: "0337031198",          // link: zalo.me/0337031198
+    facebook: "huydoanads98",         // link: facebook.com/huydoanads98
     telegram: "DHUYHEHE",             // link: t.me/DHUYHEHE
     email: "huydoan06@gmail.com"      // để trống = ẩn
   },

@@ -7,7 +7,7 @@
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
   var esc = function (s) { return String(s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); };
   var L = function (o, lg) { return o && typeof o === "object" && !Array.isArray(o) ? (o[lg || lang] || o.vi || o.en || "") : o; };
-  var brand = C.brand || "Support";
+  var brand = C.brand || "Huy Chatbot";
   var P = C.pricing || {};
   var plans = C.plans || [];
   var contact = C.contact || {};
@@ -27,6 +27,7 @@
   function contactHTML(lg) {
     var p = [];
     if (contact.zaloPhone) p.push('Zalo <a href="https://zalo.me/' + esc(contact.zaloPhone) + '" target="_blank" rel="noopener">' + esc(contact.zaloName ? contact.zaloName + " · " : "") + esc(contact.zaloPhone) + "</a>");
+    if (contact.facebook) p.push('Facebook <a href="https://www.facebook.com/' + esc(contact.facebook) + '" target="_blank" rel="noopener">' + esc(contact.facebook) + "</a>");
     if (contact.telegram) p.push('Telegram <a href="https://t.me/' + esc(contact.telegram) + '" target="_blank" rel="noopener">@' + esc(contact.telegram) + "</a>");
     if (contact.email) p.push('<a href="mailto:' + esc(contact.email) + '">' + esc(contact.email) + "</a>");
     return p.join(" · ");
