@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>24/7 Chatbot for Small Businesses — Answers Pricing &amp; Books Appointments (Demo)</title>
+<meta name="description" content="A chatbot that answers your pricing questions and takes appointments 24/7. Every booking lands in your Google Sheet. Works on your website, Facebook and WhatsApp. Try the live demo.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ReplyDesk — 24/7 Chatbot Demo">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Never miss a customer after hours — try the 24/7 booking chatbot">
+<meta property="og:description" content="Answers pricing questions, takes appointments around the clock, and logs every booking to a Google Sheet. Try the live demo in 30 seconds.">
+<meta property="og:url" content="https://huydoan06-star.github.io/demo-phu-quoc/chatbot-demo/">
+<meta property="og:image" content="https://huydoan06-star.github.io/demo-phu-quoc/chatbot-demo/og.png?v=1">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Chat window answering a pricing question and booking an appointment, next to a bookings spreadsheet">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Never miss a customer after hours — try the 24/7 booking chatbot">
+<meta name="twitter:description" content="Answers pricing, books appointments 24/7, logs every booking to a Google Sheet.">
+<meta name="twitter:image" content="https://huydoan06-star.github.io/demo-phu-quoc/chatbot-demo/og.png?v=1">
+<meta name="theme-color" content="#0F2A4A">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232563EB'/%3E%3Cpath d='M8 10h16v10H14l-4 4v-4H8z' fill='white'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=1">
+<script src="config.js?v=1"></script>
+</head>
+<body>
+<div class="demo-bar">Demo page · Sample pricing — subject to change</div>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="logo" href="#"><span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><rect width="32" height="32" rx="8"/><path d="M8 10h16v10H14l-4 4v-4H8z"/></svg></span><span data-brand>ReplyDesk</span></a>
+    <nav class="nav"><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a></nav>
+    <button class="btn btn-sm btn-pri" data-consult>Book a free consult</button>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="dot"></span> Live demo — try the chat</p>
+      <h1>Your front desk, <span class="hl">open 24/7.</span></h1>
+      <p class="lead">A chatbot that answers pricing questions and books appointments while you're busy, closed, or asleep. Every booking drops straight into your Google Sheet.</p>
+      <ul class="checks">
+        <li>Answers "How much?" instantly — in your words</li>
+        <li>Collects name, contact &amp; preferred time</li>
+        <li>Works on your website, Facebook &amp; WhatsApp</li>
+      </ul>
+      <div class="cta-row">
+        <button class="btn btn-pri" data-consult>Book a free consult</button>
+        <a class="btn btn-ghost" href="#try">Try the demo ↓</a>
+      </div>
+      <p class="micro">No contracts in the demo. Nothing you type here is sent anywhere.</p>
+    </div>
+
+    <div class="demo" id="try">
+      <div class="chat" role="region" aria-label="Demo chatbot">
+        <div class="chat-head">
+          <div class="avatar" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h16v10H10l-4 4v-4H4z"/></svg></div>
+          <div><strong data-brand>ReplyDesk</strong> Assistant<small><span class="online"></span> Online · replies instantly</small></div>
+          <button class="chat-reset" type="button" aria-label="Restart chat" title="Restart chat">↻</button>
+        </div>
+        <div class="chat-log" id="log" aria-live="polite"></div>
+        <div class="chips" id="chips"></div>
+        <form class="chat-input" id="form" autocomplete="off">
+          <input id="msg" type="text" placeholder="Type a message…" aria-label="Message" maxlength="200">
+          <button type="submit" aria-label="Send"><svg viewBox="0 0 24 24"><path d="M3 20l18-8L3 4v6l12 2-12 2z"/></svg></button>
+        </form>
+      </div>
+      <p class="demo-note">Scripted demo — your real bot is trained on your own services and prices.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sheet-sec" id="sheet">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow alt">Google Sheets sync (demo)</p>
+      <h2>Every booking, logged automatically</h2>
+      <p class="sub">Book a consult in the chat above and watch a new row appear. In the real setup this is your own Google Sheet — share it with staff, filter it, export it.</p>
+    </div>
+    <div class="sheet" aria-label="Mock bookings spreadsheet">
+      <div class="sheet-bar">
+        <span class="sheet-icon" aria-hidden="true"></span>
+        <span class="sheet-title">Bookings — Live</span>
+        <span class="sheet-status" id="sheetStatus">● Synced</span>
+      </div>
+      <div class="sheet-scroll">
+        <table>
+          <thead><tr><th class="rn"></th><th>A · Timestamp</th><th>B · Name</th><th>C · Email</th><th>D · Preferred time</th><th>E · Source</th></tr></thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+      <div class="sheet-foot"><span>Sheet1</span><button type="button" id="clearRows" class="linkbtn">Clear demo rows</button></div>
+    </div>
+    <p class="fine">Mock panel for illustration. Demo rows are stored only in your browser.</p>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow alt">How it works</p>
+      <h2>Live in about a week</h2>
+    </div>
+    <ol class="steps">
+      <li><span>1</span><h3>15-minute call</h3><p>We learn your services, prices, hours and the questions customers ask most.</p></li>
+      <li><span>2</span><h3>We build &amp; train it</h3><p>Your bot answers in your tone, asks for the details you need, and knows when to hand off to a human.</p></li>
+      <li><span>3</span><h3>Connect your sheet</h3><p>Bookings land in a Google Sheet you own, plus an email alert for each new one.</p></li>
+      <li><span>4</span><h3>Go live</h3><p>One small code snippet on your website. Facebook Messenger and WhatsApp can be added after.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="alt-bg">
+  <div class="wrap">
+    <div class="sec-head"><p class="eyebrow alt">Where it works</p><h2>Meet customers where they already message you</h2></div>
+    <div class="cards3">
+      <div class="card"><div class="ic" aria-hidden="true">🌐</div><h3>Your website</h3><p>A chat bubble on every page. Works with most site builders and custom sites.</p></div>
+      <div class="card"><div class="ic" aria-hidden="true">💬</div><h3>Facebook Messenger</h3><p>Reply to Page messages at 11 pm without picking up your phone. <em>Add-on.</em></p></div>
+      <div class="card"><div class="ic" aria-hidden="true">📱</div><h3>WhatsApp Business</h3><p>Same answers, same booking flow, same sheet. <em>Add-on.</em></p></div>
+    </div>
+    <div class="good-for"><strong>Great for:</strong> salons &amp; spas · dental &amp; med-spa · auto repair · cleaning services · fitness studios · home services · tutoring</div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow alt">Pricing</p>
+      <h2>Simple, flat pricing</h2>
+      <p class="draft-tag" data-pricing-note>Sample pricing — subject to change</p>
+    </div>
+    <div class="plans" id="plans"></div>
+  </div>
+</section>
+
+<section id="faq" class="alt-bg">
+  <div class="wrap narrow">
+    <div class="sec-head"><p class="eyebrow alt">FAQ</p><h2>Questions owners ask</h2></div>
+    <details><summary>Do I need any technical skills?</summary><p>No. We build it, connect it, and send you one snippet (or install it for you). You'll just see bookings arrive in your sheet.</p></details>
+    <details><summary>Is it an AI that might say something wrong?</summary><p>Your bot follows answers you approve — prices, hours, policies. If someone asks something outside that, it collects their contact details so you can follow up.</p></details>
+    <details><summary>Does it replace my booking software?</summary><p>It doesn't have to. It captures the request (name, contact, preferred time) and logs it. You confirm the exact slot in whatever system you use today.</p></details>
+    <details><summary>Can I change prices or answers later?</summary><p>Yes — just message us. Monthly updates are included in the website plan.</p></details>
+    <details><summary>Who owns the data?</summary><p>You do. Bookings go into a Google Sheet in your own account.</p></details>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap final-in">
+    <h2>See it with your own business info</h2>
+    <p>Book a free 15-minute consult. We'll show you a bot set up with your services and prices.</p>
+    <div class="cta-row center">
+      <button class="btn btn-pri btn-lg" data-consult>Book a free consult</button>
+    </div>
+    <p class="contact-line" id="contactLine"></p>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p><strong data-brand>ReplyDesk</strong> — demo page. Sample pricing — subject to change.</p>
+    <p class="fine">Independent service. Not affiliated with, endorsed or sponsored by Google, Meta, Facebook or WhatsApp. Google Sheets is a trademark of Google LLC; Facebook, Messenger and WhatsApp are trademarks of Meta Platforms, Inc.</p>
+  </div>
+</footer>
+
+<button class="fab" data-consult aria-label="Book a free consult">Book a free consult</button>
+
+<script src="app.js?v=1"></script>
+</body>
+</html>
