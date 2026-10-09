@@ -134,8 +134,9 @@ window.SITE_CONFIG = {
   },
   // Dải "trang mẫu do … thiết kế" ở chân trang (xoá khối này khi giao web cho tiệm thật)
   designer: {
-    zalo: { url: "https://zalo.me/0337031198", label: "0337 031 198", qr: "designer-zalo.png" },
-    telegram: { url: "https://t.me/DHUYHEHE", label: "@DHUYHEHE", qr: "designer-telegram.png" }
+    zalo: { url: "https://zalo.me/0337031198", label: "0337 031 198", qr: "designer-zalo.png" }
+    // Thêm Telegram sau này: tạo QR sạch rồi bỏ dấu // ở dòng dưới (nhớ thêm dấu phẩy sau dòng zalo)
+    // telegram: { url: "https://t.me/<username>", label: "@<username>", qr: "designer-telegram.png" }
   },
   publicUrl: "https://huydoan06-star.github.io/demo-phu-quoc/nha-hang/"
 };
