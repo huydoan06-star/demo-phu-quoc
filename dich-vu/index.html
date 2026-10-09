@@ -39,7 +39,8 @@ section{padding:68px 0;border-top:1px solid var(--line)}
 .top{position:sticky;top:0;z-index:30;background:rgba(251,248,242,.92);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
 .brand{display:flex;align-items:center;gap:10px;font:500 20px/1 var(--serif);color:var(--deep);text-decoration:none}
-.brand svg{width:26px;height:26px;color:var(--bronze)}
+.brand svg{width:26px;height:26px;color:var(--bronze)}.brand>span{display:flex;flex-direction:column;gap:3px}.brand small{font:400 10.5px/1 var(--sans);letter-spacing:.08em;color:var(--muted)}
+.slots{font-size:13.5px;color:var(--bronze);margin:12px 0 0}.slots:empty{display:none}.final .slots{color:var(--bronze-2)}
 .lang{display:flex;border:1px solid var(--stone)}.lang button{border:0;background:none;padding:8px 12px;font:500 12px var(--sans);letter-spacing:.1em;color:var(--muted);cursor:pointer}.lang button.on{background:var(--deep);color:var(--ivory)}
 /* hero */
 .hero{padding:44px 0 60px;background:radial-gradient(120% 70% at 100% 0,#efe4d0 0,transparent 60%)}
@@ -116,7 +117,7 @@ footer{background:#161c17;color:#a89f90;font-size:13px;padding:24px 0 100px;text
 <symbol id="pinS" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" d="M12 21s-6.5-6.2-6.5-11.2a6.5 6.5 0 0 1 13 0C18.5 14.8 12 21 12 21z"/><circle cx="12" cy="9.8" r="2.4" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol></svg>
 
 <header class="top"><div class="wrap">
- <a class="brand" href="#"><svg><use href="#pinS"/></svg><span data-en="Maps care · Phu Quoc">Chăm sóc Maps · Phú Quốc</span></a>
+ <a class="brand" href="#"><svg><use href="#pinS"/></svg><span><span data-cfg="brand">Ghim Tiệm</span><small data-en="Google Maps care · Phu Quoc">Chăm sóc Google Maps · Phú Quốc</small></span></a>
  <div class="lang" role="group" aria-label="Ngôn ngữ"><button type="button" data-l="vi" class="on">VI</button><button type="button" data-l="en">EN</button></div>
 </div></header>
 
@@ -130,6 +131,7 @@ footer{background:#161c17;color:#a89f90;font-size:13px;padding:24px 0 100px;text
    <a class="btn pri zalo" href="https://zalo.me/0337031198" target="_blank" rel="noopener"><svg><use href="#zl"/></svg><span data-en="Get a free Maps review check for your shop">Nhận bản đọc đánh giá Maps miễn phí cho tiệm anh/chị</span></a>
    <a class="btn ghost" href="#goi" data-en="What’s included">Xem gói gồm gì</a>
   </div>
+  <p class="slots" data-cfg="slots"></p>
   <div class="trust"><span data-en="You stay the owner">Chủ tiệm giữ quyền chủ</span><span data-en="Owner approves every reply">Chủ duyệt từng câu trả lời</span><span data-en="No fake reviews">Không đánh giá ảo</span></div>
  </div>
  <div class="phone" aria-hidden="true">
@@ -236,7 +238,7 @@ footer{background:#161c17;color:#a89f90;font-size:13px;padding:24px 0 100px;text
 
 <section class="price"><div class="wrap">
  <div class="k" data-en="Price">Chi phí</div>
- <p class="big" data-en="Quote after reviewing your shop’s profile">Báo giá sau khi xem hồ sơ của tiệm</p>
+ <p class="big" data-cfg="price" data-en="Quote after reviewing your shop’s profile">Báo giá sau khi xem hồ sơ của tiệm</p>
  <p class="lead" style="margin:0 auto" data-en="The review check is free and comes with no obligation.">Bản đọc đánh giá là miễn phí và không ràng buộc.</p>
 </div></section>
 
@@ -247,20 +249,31 @@ footer{background:#161c17;color:#a89f90;font-size:13px;padding:24px 0 100px;text
  <a class="btn pri zalo" href="https://zalo.me/0337031198" target="_blank" rel="noopener"><svg><use href="#zl"/></svg><span data-en="Message on Zalo · 0337 031 198">Nhắn Zalo · 0337 031 198</span></a>
  <img class="qr" src="zalo-qr.png" width="232" height="232" alt="QR Zalo 0337031198">
  <small data-en="Scan with Zalo or the phone camera">Quét bằng Zalo hoặc camera điện thoại</small>
+ <p class="slots" data-cfg="slots" style="margin-top:14px"></p>
 </div></section>
 </main>
-<footer><div class="wrap" data-en="Google Maps profile care · Phu Quoc · Zalo 0337031198<br>Google, Google Maps and Google Business Profile are trademarks of Google LLC. This is an independent service, not affiliated with Google.">Chăm sóc hồ sơ Google Maps · Phú Quốc · Zalo 0337031198<br>Google, Google Maps và Google Business Profile là thương hiệu của Google LLC. Đây là dịch vụ độc lập, không liên kết với Google.</div></footer>
+<footer><div class="wrap"><b data-cfg="brand" style="color:#d6cdbd;font-weight:500">Ghim Tiệm</b> · <span data-en="Google Maps profile care · Phu Quoc · Zalo 0337031198<br>Google, Google Maps and Google Business Profile are trademarks of Google LLC. This is an independent service, not affiliated with Google.">Chăm sóc hồ sơ Google Maps · Phú Quốc · Zalo 0337031198<br>Google, Google Maps và Google Business Profile là thương hiệu của Google LLC. Đây là dịch vụ độc lập, không liên kết với Google.</span></div></footer>
 <div class="dock" id="dock"><a class="btn pri" href="https://zalo.me/0337031198" target="_blank" rel="noopener"><svg><use href="#zl"/></svg><span data-en="Free Maps review check · Zalo">Nhận bản đọc đánh giá miễn phí · Zalo</span></a></div>
+<script src="config.js"></script>
 <script>
 (function(){
+ var C=window.DV||{};
  var els=[].slice.call(document.querySelectorAll("[data-en]"));els.forEach(function(e){e._vi=e.innerHTML;});
- function set(l){els.forEach(function(e){e.innerHTML=l==="en"?e.getAttribute("data-en"):e._vi;});document.documentElement.lang=l;
+ function cfg(l){
+  [].forEach.call(document.querySelectorAll('[data-cfg="brand"]'),function(e){if(C.brand)e.textContent=C.brand;});
+  var parts=[]; if(C.replyTime&&C.replyTime[l]) parts.push(l==="en"?"Reply "+C.replyTime.en:"Trả lời "+C.replyTime.vi);
+  if(C.weeklySlots) parts.push(l==="en"?"Only "+C.weeklySlots+" shops taken per week":"Mỗi tuần nhận "+C.weeklySlots+" tiệm");
+  [].forEach.call(document.querySelectorAll('[data-cfg="slots"]'),function(e){e.textContent=parts.join(" · ");});
+  var p=document.querySelector('[data-cfg="price"]'); if(p&&C.price&&C.price.enabled&&C.price[l]) p.textContent=C.price[l];
+  if(C.brand) document.title=C.brand+" – "+(l==="en"?"Google Maps care for shops in Phu Quoc":"Chăm sóc Google Maps cho tiệm ở Phú Quốc");
+ }
+ function set(l){els.forEach(function(e){e.innerHTML=l==="en"?e.getAttribute("data-en"):e._vi;});document.documentElement.lang=l;cfg(l);
   [].forEach.call(document.querySelectorAll(".lang button"),function(b){b.classList.toggle("on",b.dataset.l===l);});
   try{localStorage.setItem("dv_lang",l);}catch(e){}
   if(history.replaceState){var u=new URL(location.href);if(l==="en")u.searchParams.set("lang","en");else u.searchParams.delete("lang");history.replaceState(null,"",u);}}
  document.querySelector(".lang").onclick=function(e){var b=e.target.closest("button");if(b)set(b.dataset.l);};
  var q=new URLSearchParams(location.search).get("lang"),s=null;try{s=localStorage.getItem("dv_lang");}catch(e){}
- if(q==="en"||(!q&&s==="en"))set("en");
+ if(q==="en"||(!q&&s==="en"))set("en"); else cfg("vi");
  var d=document.getElementById("dock"),f=document.getElementById("lien-he");
  addEventListener("scroll",function(){var r=f.getBoundingClientRect();d.classList.toggle("show",scrollY>500&&r.top>innerHeight);},{passive:true});
 })();
