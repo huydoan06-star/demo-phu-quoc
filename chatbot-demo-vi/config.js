@@ -14,17 +14,19 @@ window.SITE_CONFIG = {
     email: "huydoan06@gmail.com"      // để trống = ẩn
   },
 
-  // ---- GIÁ (DRAFT) ----
-  // Chưa chốt giá: để price = null thì hiện dòng "label" bên dưới.
-  // Khi có giá: điền price (ví dụ "990.000đ / tháng") và setup (ví dụ "Phí cài đặt 1 lần: ...").
+  // ---- GIÁ (đã chốt) ----
+  // Gói có price = null thì hiện dòng "label" (báo giá riêng).
   pricing: {
-    draft: true,                      // true = hiện nhãn DRAFT
-    label: { vi: "Giá đang cập nhật — liên hệ để báo giá", en: "Pricing being finalised — contact us for a quote" }
+    draft: false,                     // true = hiện nhãn DRAFT
+    label: { vi: "Báo giá riêng", en: "Quoted separately" },
+    setup: { vi: "1.990.000đ", en: "1,990,000 VND" },      // phí cài đặt, trả 1 lần
+    monthly: { vi: "390.000đ", en: "390,000 VND" },        // phí hàng tháng
+    note: { vi: "Phí Zalo OA (nếu dùng kênh Zalo) do chủ tiệm tự trả.", en: "The Zalo OA fee (if you use the Zalo channel) is paid by the shop owner." }
   },
   plans: [
     {
       name: { vi: "Chatbot Website", en: "Website Chatbot" },
-      price: null, setup: null,
+      price: "monthly", setup: "setup",
       blurb: { vi: "Bot trực trên website của quán: trả lời giá, nhận đặt lịch, ghi vào Google Sheets.", en: "Bot on your website: answers prices, takes bookings, logs them to Google Sheets." },
       features: {
         vi: ["Soạn sẵn theo dịch vụ, bảng giá, giờ mở cửa của quán", "Nhận đặt lịch 24/7 (tên, SĐT/email, giờ muốn đến)", "Mỗi lịch hẹn tự thêm 1 dòng vào Google Sheets", "Trả lời song ngữ Việt – Anh", "Cập nhật nội dung hàng tháng"],

@@ -12,6 +12,7 @@
   var plans = C.plans || [];
   var contact = C.contact || {};
   var TIMES = C.consultTimes || { vi: ["Sáng", "Chiều", "Tối"], en: ["Morning", "Afternoon", "Evening"] };
+  var web = plans[0] || { name: { vi: "Chatbot Website", en: "Website Chatbot" } };
   var lang = C.defaultLang === "en" ? "en" : "vi";
 
   function priceLabel(lg) { return L(P.label, lg) || (lg === "en" ? "Contact us for a quote" : "Liên hệ để báo giá"); }
@@ -19,7 +20,9 @@
 
   /* ---------- static copy ---------- */
   $$("[data-brand]").forEach(function (el) { el.textContent = brand; });
-  $$("[data-pricing-note]").forEach(function (el) { el.textContent = (P.draft ? "DRAFT · " : "") + priceLabel("vi"); });
+  $$("[data-pricing-note]").forEach(function (el) { el.textContent = (P.draft ? "DRAFT · " : "") + L(P.note, "vi"); el.style.display = P.note ? "" : "none"; });
+  function priceLine(lg) { return lg === "en" ? "<b>" + esc(L(web.name, "en")) + "</b>: " + esc(L(P.setup, "en")) + " one-time setup + <b>" + esc(L(P.monthly, "en")) + "/month</b>." : "<b>" + esc(L(web.name, "vi")) + "</b>: " + esc(L(P.setup, "vi")) + " phí cài đặt (một lần) + <b>" + esc(L(P.monthly, "vi")) + "/tháng</b>."; }
+  function noteLine(lg) { return P.note ? "\n\n<i>" + esc(L(P.note, lg)) + "</i>" : ""; }
 
   function contactHTML(lg) {
     var p = [];
@@ -38,8 +41,8 @@
       (P.draft ? '<span class="draft">DRAFT</span>' : "") +
       "<h3>" + esc(L(p.name, "vi")) + '</h3><p class="blurb">' + esc(L(p.blurb, "vi")) + "</p>" +
       (p.price
-        ? '<div class="price"><span class="big">' + esc(p.price) + "</span></div>" + (p.setup ? '<p class="setup">' + esc(p.setup) + "</p>" : "")
-        : '<div class="price"><span class="big tbd">' + esc(priceLabel("vi")) + '</span></div><p class="setup">Báo giá theo nhu cầu của quán</p>') +
+        ? '<div class="price"><span class="big">' + esc(L(P.monthly, "vi")) + '</span><span class="per">/ tháng</span></div><p class="setup">+ <b>' + esc(L(P.setup, "vi")) + "</b> phí cài đặt (một lần)</p>"
+        : '<div class="price"><span class="big tbd">' + esc(priceLabel("vi")) + '</span></div><p class="setup">Báo giá theo kênh. ' + esc(L(P.note, "vi")) + "</p>") +
       "<ul>" + ((p.features && p.features.vi) || []).map(function (f) { return "<li>" + esc(f) + "</li>"; }).join("") + "</ul>" +
       '<button class="btn ' + (p.featured ? "btn-pri" : "btn-ghost") + '" data-consult>Đặt lịch tư vấn miễn phí</button></article>';
   }).join("");
@@ -142,20 +145,19 @@
   };
   function main() { var c = CH[lang]; return [c.price, c.pk, c.how, c.book, c.tryEn]; }
   function after() { var c = CH[lang]; return [c.book, c.how, c.bi]; }
-  var web = plans[0] || { name: { vi: "Chatbot Website", en: "Website Chatbot" } };
   var addon = plans[1] || { name: { vi: "Thêm kênh", en: "Extra channels" } };
 
   var R = {
     vi: {
       greet: function () { return [["Xin chào anh/chị! 👋 Em là trợ lý của " + esc(brand) + ".", "Em là bản demo của chatbot dành cho spa, salon, quán ăn, cửa hàng: trả lời khách hỏi giá và nhận đặt lịch 24/7.\n\n🌐 Thử nhắn bằng tiếng Anh (ví dụ “How much is it?”) — em sẽ tự trả lời bằng tiếng Anh, như với khách du lịch ở Phú Quốc."], main()]; },
-      pricing: function () { return [[draftTag("vi") + "Giá gói <b>" + esc(L(web.name, "vi")) + "</b> đang được cập nhật. Anh/chị đặt lịch tư vấn hoặc nhắn trực tiếp để nhận báo giá theo nhu cầu của quán nhé.", "Gói đã gồm: soạn kịch bản theo dịch vụ và giá của quán, trả lời song ngữ Việt – Anh, ghi lịch hẹn vào Google Sheets, cập nhật nội dung hàng tháng."], [CH.vi.book, CH.vi.pk, CH.vi.chan]]; },
-      packages: function () { return [[draftTag("vi") + "Có 2 phần:\n\n<b>1. " + esc(L(web.name, "vi")) + "</b> — bot trên website: trả lời giá, giờ mở cửa, nhận đặt lịch, ghi vào Google Sheets.\n\n<b>2. " + esc(L(addon.name, "vi")) + "</b> — cùng bot đó gắn thêm vào Fanpage, Zalo OA hoặc Telegram.", "Đa số chủ quán bắt đầu với website rồi thêm kênh sau."], [CH.vi.how, CH.vi.book, CH.vi.time]]; },
+      pricing: function () { return [[priceLine("vi") + "\n\nĐã gồm: soạn kịch bản theo dịch vụ và giá của quán, trả lời song ngữ Việt – Anh, ghi lịch hẹn vào Google Sheets, cập nhật nội dung hàng tháng." + noteLine("vi"), "Thêm kênh Messenger / Zalo / Telegram thì báo giá riêng. Anh/chị muốn đặt lịch tư vấn miễn phí không ạ?"], [CH.vi.book, CH.vi.pk, CH.vi.chan]]; },
+      packages: function () { return [[draftTag("vi") + "Có 2 phần:\n\n<b>1. " + esc(L(web.name, "vi")) + "</b> — " + esc(L(P.setup, "vi")) + " cài đặt + " + esc(L(P.monthly, "vi")) + "/tháng. Bot trên website: trả lời giá, giờ mở cửa, nhận đặt lịch, ghi vào Google Sheets.\n\n<b>2. " + esc(L(addon.name, "vi")) + "</b> — cùng bot đó gắn thêm vào Fanpage, Zalo OA hoặc Telegram (báo giá riêng)." + noteLine("vi"), "Đa số chủ quán bắt đầu với website rồi thêm kênh sau."], [CH.vi.how, CH.vi.book, CH.vi.time]]; },
       how: function () { return [["Quy trình rất gọn:\n\n<b>1.</b> Gọi 15 phút — em hỏi dịch vụ, giá, giờ mở cửa, câu khách hay hỏi.\n<b>2.</b> Em soạn kịch bản bot (Việt + Anh), đúng giọng của quán.\n<b>3.</b> Nối với Google Sheets của quán.\n<b>4.</b> Gắn lên website — em gắn giúp.", "Sau đó khách hỏi, bot trả lời, lịch hẹn tự vào bảng tính. Anh/chị chỉ việc gọi xác nhận."], [CH.vi.time, CH.vi.sheets, CH.vi.book]]; },
       sheets: function () { return [["Mỗi lịch hẹn bot nhận sẽ thành một dòng mới trong Google Sheets của quán: thời gian, tên, SĐT/email, giờ khách muốn đến, ngôn ngữ và kênh (website, Messenger, Zalo, Telegram).", "Muốn xem tận mắt? Đặt thử một lịch với em rồi nhìn bảng <b>Lịch hẹn — Trực tiếp</b> bên dưới nhé. 👇"], [CH.vi.book, CH.vi.price]]; },
       channels: function () { return [["Bot có thể chạy trên:\n• <b>Website</b> của quán\n• <b>Facebook Messenger</b> (Fanpage)\n• <b>Zalo</b> (qua Zalo Official Account)\n• <b>Telegram</b>\n\nCùng câu trả lời, cùng một bảng lịch hẹn. Phần thêm kênh báo giá riêng."], [CH.vi.price, CH.vi.book]]; },
       timeline: function () { return [["Thường khoảng <b>một tuần</b> từ cuộc gọi đầu tiên đến khi chạy thật — nhanh hơn nếu quán đã có sẵn bảng giá và câu hỏi thường gặp."], [CH.vi.book, CH.vi.price]]; },
       ai: function () { return [["Bot chỉ trả lời theo nội dung <b>anh/chị đã duyệt</b> — giá, giờ mở cửa, chính sách. Khách hỏi ngoài phạm vi thì bot xin số điện thoại để quán gọi lại, không tự bịa thông tin về quán."], after()]; },
-      contract: function () { return [["Dự kiến trả theo tháng, không ràng buộc dài hạn. Điều khoản cụ thể sẽ chốt khi tư vấn — hiện giá vẫn đang cập nhật."], [CH.vi.book, CH.vi.price]]; },
+      contract: function () { return [["Dự kiến trả theo tháng, không ràng buộc dài hạn. Điều khoản cụ thể sẽ chốt khi tư vấn — bảng giá có trong mục Bảng giá."], [CH.vi.book, CH.vi.price]]; },
       bilingual: function () { return [["Đây chính là chế độ song ngữ: khách nhắn tiếng Anh thì bot trả lời tiếng Anh, nhắn tiếng Việt thì trả lời tiếng Việt. Khách cũng có thể bấm <b>VI / EN</b> ở đầu khung chat.", "Câu trả lời hai thứ tiếng được soạn sẵn theo nội dung của quán — bot không dịch máy câu bất kỳ. Cần thêm tiếng khác (Hàn, Trung, Nga…) thì mình trao đổi khi tư vấn."], [CH.vi.tryEn, CH.vi.book]]; },
       contact: function () { var h = contactHTML("vi"); return [["Nhanh nhất là đặt lịch tư vấn miễn phí ngay tại đây — em chỉ hỏi tên, số điện thoại (hoặc email) và giờ tiện." + (h ? "\n\nHoặc nhắn trực tiếp: " + h : "")], [CH.vi.book]]; },
       thanks: function () { return [["Dạ không có gì ạ! Anh/chị cần hỏi thêm gì không?"], main()]; },
@@ -164,14 +166,14 @@
     },
     en: {
       greet: function () { return [["Hi there! 👋 I'm the " + esc(brand) + " assistant.", "I'm a live demo of the chatbot for spas, salons, restaurants and shops — I answer price questions and take bookings 24/7.\n\n🌐 I reply in English or Vietnamese, matching whatever language the customer writes in."], main()]; },
-      pricing: function () { return [[draftTag("en") + "Pricing for the <b>" + esc(L(web.name, "en")) + "</b> is being finalised. Book a free consult or message us directly for a quote based on your shop.", "It includes: a script built on your services and prices, bilingual Vietnamese–English replies, bookings logged to Google Sheets, and monthly content updates."], [CH.en.book, CH.en.pk, CH.en.chan]]; },
-      packages: function () { return [[draftTag("en") + "There are two pieces:\n\n<b>1. " + esc(L(web.name, "en")) + "</b> — bot on your website: answers prices and opening hours, takes bookings, logs them to Google Sheets.\n\n<b>2. " + esc(L(addon.name, "en")) + "</b> — the same bot on your Facebook Page, Zalo OA or Telegram.", "Most owners start with the website and add channels later."], [CH.en.how, CH.en.book, CH.en.time]]; },
+      pricing: function () { return [[priceLine("en") + "\n\nIncludes: a script built on your services and prices, bilingual Vietnamese–English replies, bookings logged to Google Sheets, and monthly content updates." + noteLine("en"), "Extra channels (Messenger / Zalo / Telegram) are quoted separately. Want to book a free consult?"], [CH.en.book, CH.en.pk, CH.en.chan]]; },
+      packages: function () { return [[draftTag("en") + "There are two pieces:\n\n<b>1. " + esc(L(web.name, "en")) + "</b> — " + esc(L(P.setup, "en")) + " setup + " + esc(L(P.monthly, "en")) + "/month. Bot on your website: answers prices and opening hours, takes bookings, logs them to Google Sheets.\n\n<b>2. " + esc(L(addon.name, "en")) + "</b> — the same bot on your Facebook Page, Zalo OA or Telegram (quoted separately)." + noteLine("en"), "Most owners start with the website and add channels later."], [CH.en.how, CH.en.book, CH.en.time]]; },
       how: function () { return [["Here's how it works:\n\n<b>1.</b> 15-min call — we learn your services, prices, hours and common questions.\n<b>2.</b> We write your bot's script (Vietnamese + English) in your tone.\n<b>3.</b> We connect it to your Google Sheet.\n<b>4.</b> We add it to your website for you.", "After that, customers ask, the bot answers, and bookings land in your sheet. You just confirm them."], [CH.en.time, CH.en.sheets, CH.en.book]]; },
       sheets: function () { return [["Every booking the bot takes becomes a new row in your Google Sheet — time, name, phone/email, preferred time, language and channel (website, Messenger, Zalo, Telegram).", "Want to see it? Book a demo consult with me and watch the <b>bookings</b> panel below update. 👇"], [CH.en.book, CH.en.price]]; },
       channels: function () { return [["The bot can run on:\n• <b>Your website</b>\n• <b>Facebook Messenger</b> (your Page)\n• <b>Zalo</b> (via a Zalo Official Account)\n• <b>Telegram</b>\n\nSame answers, one booking sheet. Extra channels are quoted separately."], [CH.en.price, CH.en.book]]; },
       timeline: function () { return [["Usually about <b>a week</b> from our first call to going live — faster if you already have your prices and FAQs written down."], [CH.en.book, CH.en.price]]; },
       ai: function () { return [["Your bot sticks to answers <b>you approve</b> — prices, hours, policies. If a customer asks something outside that, it takes their phone number so you can call back. No made-up answers about your business."], after()]; },
-      contract: function () { return [["The plan is meant to be month-to-month, no long lock-in. Exact terms are confirmed on your consult — pricing is still being finalised."], [CH.en.book, CH.en.price]]; },
+      contract: function () { return [["The plan is meant to be month-to-month, no long lock-in. Exact terms are confirmed on your consult."], [CH.en.book, CH.en.price]]; },
       bilingual: function () { return [["That's the bilingual mode: customers who write in English get English replies; Vietnamese gets Vietnamese. They can also tap <b>VI / EN</b> at the top of the chat.", "Replies in both languages are pre-written from your shop's info — it doesn't machine-translate arbitrary text. Need another language (Korean, Chinese, Russian…)? Ask on your consult."], [CH.en.tryEn, CH.en.book]]; },
       contact: function () { var h = contactHTML("en"); return [["The quickest way is to book a free consult right here — I'll just ask your name, phone (or email) and a good time." + (h ? "\n\nOr message directly: " + h : "")], [CH.en.book]]; },
       thanks: function () { return [["You're welcome! Anything else I can help with?"], main()]; },
