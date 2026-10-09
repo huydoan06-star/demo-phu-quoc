@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Chatbot 24/7 cho quán nhỏ ở Phú Quốc — trả lời giá, nhận đặt lịch, song ngữ Việt – Anh (Demo)</title>
+<meta name="description" content="Chatbot trực 24/7 cho spa, salon, quán ăn, cửa hàng: trả lời khách hỏi giá, nhận đặt lịch, tự ghi vào Google Sheets. Khách nước ngoài nhắn tiếng Anh, bot trả lời tiếng Anh. Thử demo ngay.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Support — Demo chatbot 24/7">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:title" content="Quán nghỉ, chatbot vẫn trực 24/7 — thử demo song ngữ Việt – Anh">
+<meta property="og:description" content="Trả lời giá, nhận đặt lịch, ghi vào Google Sheets. Khách Tây nhắn tiếng Anh, bot tự trả lời tiếng Anh. Website · Messenger · Zalo · Telegram.">
+<meta property="og:url" content="https://huydoan06-star.github.io/demo-phu-quoc/chatbot-demo-vi/">
+<meta property="og:image" content="https://huydoan06-star.github.io/demo-phu-quoc/chatbot-demo-vi/og.png?v=1">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Khung chat trả lời giá bằng tiếng Việt và tiếng Anh, bên cạnh bảng Google Sheets ghi lịch hẹn">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Quán nghỉ, chatbot vẫn trực 24/7 — demo song ngữ Việt – Anh">
+<meta name="twitter:description" content="Trả lời giá, nhận đặt lịch, ghi vào Google Sheets. Tự trả lời tiếng Anh cho khách nước ngoài.">
+<meta name="twitter:image" content="https://huydoan06-star.github.io/demo-phu-quoc/chatbot-demo-vi/og.png?v=1">
+<meta name="theme-color" content="#0F2A4A">
+<link rel="alternate" hreflang="en" href="https://huydoan06-star.github.io/demo-phu-quoc/chatbot-demo/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232563EB'/%3E%3Cpath d='M8 10h16v10H14l-4 4v-4H8z' fill='white'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=1">
+<script src="config.js?v=1"></script>
+</head>
+<body>
+<div class="demo-bar">Trang demo · Giá đang cập nhật (DRAFT)</div>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="logo" href="#"><span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><rect width="32" height="32" rx="8"/><path d="M8 10h16v10H14l-4 4v-4H8z"/></svg></span><span data-brand>Support</span></a>
+    <nav class="nav"><a href="#how">Cách hoạt động</a><a href="#song-ngu">Song ngữ</a><a href="#pricing">Bảng giá</a><a href="#faq">Hỏi đáp</a></nav>
+    <a class="lang-link" href="../chatbot-demo/" hreflang="en" lang="en" title="English version">EN</a>
+    <button class="btn btn-sm btn-pri" data-consult>Tư vấn miễn phí</button>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="dot"></span> Demo thật — nhắn thử ngay</p>
+      <h1>Quán nghỉ, <span class="hl">chatbot vẫn trực 24/7.</span></h1>
+      <p class="lead">Khách hỏi giá, hỏi giờ, muốn đặt lịch — bot trả lời liền, kể cả lúc anh chị đang bận tay hay đã đóng cửa. Lịch hẹn nào cũng tự ghi vào Google Sheets.</p>
+      <ul class="checks">
+        <li>Trả lời “Bao nhiêu tiền?” ngay — đúng giá, đúng giọng của quán</li>
+        <li>Lấy tên, số điện thoại và giờ khách muốn đến</li>
+        <li>Khách nước ngoài nhắn tiếng Anh, bot tự trả lời tiếng Anh</li>
+        <li>Chạy trên website, Facebook Messenger, Zalo, Telegram</li>
+      </ul>
+      <div class="cta-row">
+        <button class="btn btn-pri" data-consult>Đặt lịch tư vấn miễn phí</button>
+        <a class="btn btn-ghost" href="#try">Nhắn thử demo ↓</a>
+      </div>
+      <p class="micro">Bản demo: những gì anh chị gõ ở đây không gửi đi đâu cả.</p>
+    </div>
+
+    <div class="demo" id="try">
+      <div class="chat" role="region" aria-label="Chatbot demo">
+        <div class="chat-head">
+          <div class="avatar" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h16v10H10l-4 4v-4H4z"/></svg></div>
+          <div class="who"><strong data-brand>Support</strong> <span id="headRole">Trợ lý</span><small><span class="online"></span> <span id="headStatus">Đang trực 24/7</span></small></div>
+          <div class="lang-tg" role="group" aria-label="Ngôn ngữ / Language">
+            <button type="button" data-lang="vi" aria-pressed="true" title="Tiếng Việt">VI</button>
+            <button type="button" data-lang="en" aria-pressed="false" title="English">EN</button>
+          </div>
+          <button class="chat-reset" type="button" aria-label="Bắt đầu lại" title="Bắt đầu lại">↻</button>
+        </div>
+        <div class="chat-log" id="log" aria-live="polite"></div>
+        <div class="chips" id="chips"></div>
+        <form class="chat-input" id="form" autocomplete="off">
+          <input id="msg" type="text" placeholder="Nhập tin nhắn…" aria-label="Tin nhắn" maxlength="200">
+          <button type="submit" aria-label="Gửi"><svg viewBox="0 0 24 24"><path d="M3 20l18-8L3 4v6l12 2-12 2z"/></svg></button>
+        </form>
+      </div>
+      <p class="demo-note">Thử gõ tiếng Anh, ví dụ “How much is it?” — bot tự chuyển sang tiếng Anh. Kịch bản demo; bot thật được soạn theo dịch vụ và giá của quán anh chị.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sheet-sec" id="sheet">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow alt">Đồng bộ Google Sheets (demo)</p>
+      <h2>Lịch hẹn nào cũng tự ghi lại</h2>
+      <p class="sub">Đặt thử một lịch tư vấn trong khung chat phía trên, một dòng mới sẽ hiện ra ở đây. Bản thật là Google Sheets của chính quán — chia sẻ cho nhân viên, lọc, xuất file tuỳ ý.</p>
+    </div>
+    <div class="sheet" aria-label="Bảng tính lịch hẹn (mô phỏng)">
+      <div class="sheet-bar">
+        <span class="sheet-icon" aria-hidden="true"></span>
+        <span class="sheet-title">Lịch hẹn — Trực tiếp</span>
+        <span class="sheet-status" id="sheetStatus">● Đã đồng bộ</span>
+      </div>
+      <div class="sheet-scroll">
+        <table>
+          <thead><tr><th class="rn"></th><th>A · Thời gian</th><th>B · Tên</th><th>C · SĐT / Email</th><th>D · Giờ mong muốn</th><th>E · Ngôn ngữ</th><th>F · Nguồn</th></tr></thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+      <div class="sheet-foot"><span>Trang tính 1</span><button type="button" id="clearRows" class="linkbtn">Xoá dòng demo</button></div>
+    </div>
+    <p class="fine">Bảng mô phỏng để minh hoạ. Dòng demo chỉ lưu trong trình duyệt của anh chị.</p>
+  </div>
+</section>
+
+<section id="song-ngu" class="alt-bg">
+  <div class="wrap">
+    <div class="bi-grid">
+      <div class="sec-head" style="text-align:left;margin:0">
+        <p class="eyebrow alt">Chế độ song ngữ</p>
+        <h2>Khách Tây nhắn tiếng Anh, bot tự trả lời tiếng Anh</h2>
+        <p class="sub" style="margin-left:0">Ở Phú Quốc, khách nước ngoài nhắn hỏi giá lúc nửa đêm là chuyện thường. Bot nhận ra khách đang nhắn tiếng Việt hay tiếng Anh và trả lời đúng thứ tiếng đó. Khách cũng có thể bấm nút <b>VI / EN</b> trên khung chat để đổi.</p>
+        <p class="fine" style="text-align:left">Lưu ý: câu trả lời hai thứ tiếng được soạn sẵn theo nội dung của quán (giá, giờ mở cửa, dịch vụ) — bot không dịch máy câu bất kỳ.</p>
+      </div>
+      <div class="bi-ex" aria-label="Ví dụ hội thoại">
+        <div class="msg me">Hi, how much for a 60-min massage?</div>
+        <div class="msg bot">Hi! A 60-minute massage is … (your price). Would you like to book a time?</div>
+        <div class="msg me">Cho em hỏi tối nay còn chỗ không ạ?</div>
+        <div class="msg bot">Dạ còn ạ! Anh/chị cho em xin tên và số điện thoại để giữ chỗ nhé.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow alt">Cách hoạt động</p>
+      <h2>Khoảng một tuần là chạy</h2>
+    </div>
+    <ol class="steps">
+      <li><span>1</span><h3>Gọi 15 phút</h3><p>Em hỏi về dịch vụ, bảng giá, giờ mở cửa và những câu khách hay hỏi nhất.</p></li>
+      <li><span>2</span><h3>Soạn kịch bản bot</h3><p>Bot trả lời đúng giọng của quán, bằng tiếng Việt và tiếng Anh, biết khi nào cần chuyển cho người thật.</p></li>
+      <li><span>3</span><h3>Nối Google Sheets</h3><p>Lịch hẹn ghi vào bảng tính của chính quán, kèm thông báo khi có lịch mới.</p></li>
+      <li><span>4</span><h3>Chạy thật</h3><p>Gắn lên website bằng một đoạn mã nhỏ (em gắn giúp). Muốn thêm Messenger, Zalo, Telegram thì làm tiếp.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="alt-bg">
+  <div class="wrap">
+    <div class="sec-head"><p class="eyebrow alt">Kênh hỗ trợ</p><h2>Khách nhắn ở đâu, bot trả lời ở đó</h2></div>
+    <div class="cards3 cards4">
+      <div class="card"><div class="ic" aria-hidden="true">🌐</div><h3>Website</h3><p>Bong bóng chat trên mọi trang. Hợp với đa số trang web và trình tạo web.</p></div>
+      <div class="card"><div class="ic" aria-hidden="true">💬</div><h3>Facebook Messenger</h3><p>Trả lời tin nhắn Fanpage lúc 11 giờ đêm mà không cần cầm điện thoại. <em>Thêm kênh.</em></p></div>
+      <div class="card"><div class="ic" aria-hidden="true">🟦</div><h3>Zalo</h3><p>Qua Zalo Official Account (OA) của quán — cùng câu trả lời, cùng bảng lịch hẹn. <em>Thêm kênh.</em></p></div>
+      <div class="card"><div class="ic" aria-hidden="true">✈️</div><h3>Telegram</h3><p>Bot Telegram cho khách quen dùng Telegram, nhất là khách nước ngoài. <em>Thêm kênh.</em></p></div>
+    </div>
+    <div class="good-for"><strong>Hợp với:</strong> spa, massage · salon tóc, nail · quán ăn, quán cà phê · cửa hàng đặc sản, quà lưu niệm · homestay · thuê xe · tour, lặn biển</div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow alt">Bảng giá</p>
+      <h2>Gói dịch vụ</h2>
+      <p class="draft-tag" data-pricing-note>DRAFT · Giá đang cập nhật — liên hệ để báo giá</p>
+    </div>
+    <div class="plans" id="plans"></div>
+  </div>
+</section>
+
+<section id="faq" class="alt-bg">
+  <div class="wrap narrow">
+    <div class="sec-head"><p class="eyebrow alt">Hỏi đáp</p><h2>Chủ quán hay hỏi</h2></div>
+    <details><summary>Tôi không rành công nghệ, có dùng được không?</summary><p>Được ạ. Em làm, em gắn, anh chị chỉ cần mở bảng tính xem lịch hẹn mới.</p></details>
+    <details><summary>Bot có trả lời sai, nói bừa không?</summary><p>Bot chỉ trả lời theo nội dung anh chị đã duyệt — giá, giờ mở cửa, chính sách. Câu nào ngoài phạm vi, bot xin số điện thoại để quán gọi lại.</p></details>
+    <details><summary>Bot có dịch được mọi câu sang tiếng Anh không?</summary><p>Không. Bot trả lời song ngữ theo kịch bản soạn sẵn cho quán: khách nhắn tiếng Anh thì nhận câu trả lời tiếng Anh tương ứng. Cần thêm tiếng khác (Hàn, Trung, Nga…) thì trao đổi khi tư vấn.</p></details>
+    <details><summary>Sau này đổi giá, đổi nội dung được không?</summary><p>Được, anh chị nhắn em là em cập nhật.</p></details>
+    <details><summary>Dữ liệu khách thuộc về ai?</summary><p>Thuộc về quán. Lịch hẹn nằm trong Google Sheets của chính tài khoản quán.</p></details>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap final-in">
+    <h2>Xem bot chạy với thông tin quán của anh chị</h2>
+    <p>Đặt lịch tư vấn miễn phí 15 phút. Em sẽ dựng thử một bot với dịch vụ và giá của quán.</p>
+    <div class="cta-row center">
+      <button class="btn btn-pri btn-lg" data-consult>Đặt lịch tư vấn miễn phí</button>
+    </div>
+    <p class="contact-line" id="contactLine"></p>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p><strong data-brand>Support</strong> — trang demo. Giá đang cập nhật. · <a href="../chatbot-demo/" lang="en">English version</a></p>
+    <p class="fine">Dịch vụ độc lập. Không liên kết, không được bảo trợ hay tài trợ bởi Google, Meta (Facebook, Messenger), Zalo (VNG) hay Telegram. Google Sheets là nhãn hiệu của Google LLC; Facebook và Messenger là nhãn hiệu của Meta Platforms, Inc.; Zalo là nhãn hiệu của VNG.</p>
+  </div>
+</footer>
+
+<button class="fab" data-consult aria-label="Đặt lịch tư vấn miễn phí">Đặt lịch tư vấn miễn phí</button>
+
+<script src="app.js?v=1"></script>
+</body>
+</html>

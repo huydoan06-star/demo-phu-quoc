@@ -6,8 +6,10 @@
   var esc = function (s) { return String(s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); };
   var cur = C.currency || "$";
   var money = function (n) { return cur + Number(n).toLocaleString("en-US"); };
-  var brand = C.brand || "ReplyDesk";
-  var note = C.pricingNote || "Sample pricing — subject to change";
+  var brand = C.brand || "Support";
+  var note = C.pricingNote || "";
+  var trial = C.trial || null;
+  var trialLine = trial ? "Founding trial: first " + trial.spots + " businesses only — " + money(trial.setup) + " setup" : "";
   var plans = C.plans || [];
   var web = plans[0] || { setup: 299, monthly: 99, name: "Website Chatbot" };
   var addon = plans[1] || { name: "Facebook / WhatsApp Add-on" };
@@ -16,7 +18,8 @@
 
   /* ---------- static copy from config ---------- */
   $$("[data-brand]").forEach(function (el) { el.textContent = brand; });
-  $$("[data-pricing-note]").forEach(function (el) { el.textContent = note; });
+  $$("[data-pricing-note]").forEach(function (el) { el.textContent = note; el.hidden = !note; });
+  var tt = $("#trialTag"); if (tt && trial) { tt.textContent = trialLine + " (in exchange for a testimonial)"; tt.style.display = ""; }
 
   function contactHTML(light) {
     var parts = [];
@@ -33,11 +36,11 @@
     var priced = p.monthly != null;
     return '<article class="plan' + (p.featured ? " featured" : "") + '">' +
       (p.featured ? '<span class="badge">Most popular</span>' : "") +
-      '<span class="draft">DRAFT</span>' +
       "<h3>" + esc(p.name) + '</h3><p class="blurb">' + esc(p.blurb || "") + "</p>" +
       (priced
         ? '<div class="price"><span class="big">' + money(p.monthly) + '</span><span class="per">/ month</span></div>' +
-          '<p class="setup">+ <b>' + money(p.setup) + "</b> one-time setup</p>"
+          '<p class="setup">+ <b>' + money(p.setup) + "</b> one-time setup</p>" +
+          (trial && p.featured ? '<p class="setup"><b>' + esc(trialLine) + "</b> — in exchange for a testimonial/review.</p>" : "")
         : '<div class="price"><span class="big" style="font-size:32px">Custom quote</span></div><p class="setup">Priced per channel after a short call</p>') +
       "<ul>" + (p.features || []).map(function (f) { return "<li>" + esc(f) + "</li>"; }).join("") + "</ul>" +
       '<button class="btn ' + (p.featured ? "btn-pri" : "btn-ghost") + '" data-consult>Book a free consult</button>' +
@@ -121,16 +124,18 @@
   function priceLine() {
     return "<b>" + esc(web.name) + "</b>: " + money(web.setup) + " one-time setup + <b>" + money(web.monthly) + "/month</b>.";
   }
+  function noteTag() { return note ? '<span class="tag">' + esc(note) + "</span>\n" : ""; }
+  function trialSentence() { return trial ? "\n\n<b>" + esc(trialLine) + "</b> (instead of " + money(web.setup) + "), in exchange for a short testimonial/review." : ""; }
   var R = {
     greet: function () {
       return [["Hi there! 👋 I'm the " + esc(brand) + " assistant.", "I'm a live example of the chatbot we build for small businesses — I answer pricing questions and take appointment requests 24/7.\n\nWhat would you like to know?"], MAIN];
     },
     pricing: function () {
-      return [['<span class="tag">' + esc(note) + "</span>\n" + priceLine() + "\n\nThat covers setup, training it on your services and prices, the Google Sheets booking log, and monthly updates.",
+      return [[noteTag() + priceLine() + trialSentence() + "\n\nThat covers setup, training it on your services and prices, the Google Sheets booking log, and monthly updates.",
         "Facebook Messenger and WhatsApp are an add-on — those are a custom quote depending on what you need."], ["📦 What's included?", "📅 Book a free consult", "📱 Facebook / WhatsApp"]];
     },
     packages: function () {
-      return [['<span class="tag">' + esc(note) + "</span>\nThere are two pieces:\n\n<b>1. " + esc(web.name) + "</b> — " + money(web.setup) + " setup + " + money(web.monthly) + "/mo. Bot on your website, answers FAQs & prices, takes bookings, logs them to Google Sheets, emails you each one.\n\n<b>2. " + esc(addon.name) + "</b> — custom quote. Same bot on your Facebook Page and WhatsApp Business.",
+      return [[noteTag() + "There are two pieces:\n\n<b>1. " + esc(web.name) + "</b> — " + money(web.setup) + " setup + " + money(web.monthly) + "/mo. Bot on your website, answers FAQs & prices, takes bookings, logs them to Google Sheets, emails you each one.\n\n<b>2. " + esc(addon.name) + "</b> — custom quote. Same bot on your Facebook Page and WhatsApp Business.",
         "Most owners start with the website and add channels later."], ["⚙️ How it works", "📅 Book a free consult", "⏱️ How long to set up?"]];
     },
     included: function () {
@@ -154,7 +159,7 @@
       return [["Good question. Your bot sticks to answers <b>you approve</b> — prices, hours, policies. If a customer asks something outside that, it politely takes their contact info so you can follow up. No made-up answers about your business."], AFTER];
     },
     contract: function () {
-      return [["The monthly plan is meant to be month-to-month. Exact terms get confirmed on your consult — this page shows <b>sample pricing</b> only."], ["📅 Book a free consult", "💲 Pricing"]];
+      return [["The monthly plan is meant to be month-to-month. Exact terms get confirmed on your consult."], ["📅 Book a free consult", "💲 Pricing"]];
     },
     software: function () {
       return [["You can keep your current calendar or booking app. The bot captures the request and logs it; you confirm the exact slot the way you do today."], AFTER];
@@ -182,11 +187,11 @@
     ["timeline", /\b(how long|timeline|when can|how soon|how fast|weeks?|days?)\b|⏱/],
     ["sheets", /\b(google|sheets?|spreadsheet|excel|log|record|data)\b|📊/],
     ["channels", /\b(facebook|messenger|whatsapp|instagram|insta|fb|ig|wix|squarespace|wordpress|shopify|website|site|channels?)\b|📱/],
-    ["pricing", /\b(price|prices|pricing|cost|costs|how much|fee|fees|monthly|per month|expensive|cheap|budget|\$)|💲/],
+    ["pricing", /\b(trial|founding|offer|discount|deal|price|prices|pricing|cost|costs|how much|fee|fees|monthly|per month|expensive|cheap|budget|\$)|💲/],
     ["packages", /\b(package|packages|plan|plans|tier|options?|bundle)\b|📦/],
     ["how", /\b(how (does|do|it) ?(it|this|you)? ?work|how it works|process|setup|set up|install|works?)\b|⚙/],
     ["ai", /\b(ai|wrong|mistake|accurate|hallucinat|robot|bot say)\b/],
-    ["contract", /\b(contract|cancel|commitment|trial|refund|lock)\b/],
+    ["contract", /\b(contract|cancel|commitment|refund|lock)\b/],
     ["software", /\b(calendly|square|vagaro|booking software|calendar|acuity|mindbody)\b/],
     ["language", /\b(spanish|espa[nñ]ol|language|languages|vietnamese|chinese)\b/],
     ["contact", /\b(contact|email|phone|number|telegram|reach)\b/],

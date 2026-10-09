@@ -6,7 +6,7 @@
 <title>24/7 Chatbot for Small Businesses — Answers Pricing &amp; Books Appointments (Demo)</title>
 <meta name="description" content="A chatbot that answers your pricing questions and takes appointments 24/7. Every booking lands in your Google Sheet. Works on your website, Facebook and WhatsApp. Try the live demo.">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="ReplyDesk — 24/7 Chatbot Demo">
+<meta property="og:site_name" content="Support — 24/7 Chatbot Demo">
 <meta property="og:locale" content="en_US">
 <meta property="og:title" content="Never miss a customer after hours — try the 24/7 booking chatbot">
 <meta property="og:description" content="Answers pricing questions, takes appointments around the clock, and logs every booking to a Google Sheet. Try the live demo in 30 seconds.">
@@ -22,15 +22,15 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232563EB'/%3E%3Cpath d='M8 10h16v10H14l-4 4v-4H8z' fill='white'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=1">
-<script src="config.js?v=1"></script>
+<link rel="stylesheet" href="style.css?v=2">
+<script src="config.js?v=2"></script>
 </head>
 <body>
-<div class="demo-bar">Demo page · Sample pricing — subject to change</div>
+<div class="demo-bar">Demo page · <a href="../chatbot-demo-vi/" lang="vi" style="color:inherit">Tiếng Việt</a></div>
 
 <header class="top">
   <div class="wrap top-in">
-    <a class="logo" href="#"><span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><rect width="32" height="32" rx="8"/><path d="M8 10h16v10H14l-4 4v-4H8z"/></svg></span><span data-brand>ReplyDesk</span></a>
+    <a class="logo" href="#"><span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><rect width="32" height="32" rx="8"/><path d="M8 10h16v10H14l-4 4v-4H8z"/></svg></span><span data-brand>Support</span></a>
     <nav class="nav"><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a></nav>
     <button class="btn btn-sm btn-pri" data-consult>Book a free consult</button>
   </div>
@@ -59,7 +59,7 @@
       <div class="chat" role="region" aria-label="Demo chatbot">
         <div class="chat-head">
           <div class="avatar" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h16v10H10l-4 4v-4H4z"/></svg></div>
-          <div><strong data-brand>ReplyDesk</strong> Assistant<small><span class="online"></span> Online · replies instantly</small></div>
+          <div><strong data-brand>Support</strong> Assistant<small><span class="online"></span> Online · replies instantly</small></div>
           <button class="chat-reset" type="button" aria-label="Restart chat" title="Restart chat">↻</button>
         </div>
         <div class="chat-log" id="log" aria-live="polite"></div>
@@ -131,7 +131,7 @@
     <div class="sec-head">
       <p class="eyebrow alt">Pricing</p>
       <h2>Simple, flat pricing</h2>
-      <p class="draft-tag" data-pricing-note>Sample pricing — subject to change</p>
+      <p class="draft-tag" id="trialTag" style="display:none"></p>
     </div>
     <div class="plans" id="plans"></div>
   </div>
@@ -162,13 +162,13 @@
 
 <footer class="foot">
   <div class="wrap">
-    <p><strong data-brand>ReplyDesk</strong> — demo page. Sample pricing — subject to change.</p>
+    <p><strong data-brand>Support</strong> — demo page. · <a href="../chatbot-demo-vi/" lang="vi">Tiếng Việt</a></p>
     <p class="fine">Independent service. Not affiliated with, endorsed or sponsored by Google, Meta, Facebook or WhatsApp. Google Sheets is a trademark of Google LLC; Facebook, Messenger and WhatsApp are trademarks of Meta Platforms, Inc.</p>
   </div>
 </footer>
 
 <button class="fab" data-consult aria-label="Book a free consult">Book a free consult</button>
 
-<script src="app.js?v=1"></script>
+<script src="app.js?v=2"></script>
 </body>
 </html>

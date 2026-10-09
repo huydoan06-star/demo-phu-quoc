@@ -3,18 +3,21 @@
    No build step: save, commit, push.
    ========================================================== */
 window.SITE_CONFIG = {
-  brand: "ReplyDesk",                 // working name — change freely
+  brand: "Support",                   // brand name — change freely
   tagline: "A 24/7 chatbot for small businesses",
 
   // ---- Contact (real inquiries) ----
   // Leave email "" to hide email links; Telegram is used as fallback.
   contact: {
-    email: "",                        // e.g. "hello@yourdomain.com"  <-- TODO Đại nhân
+    email: "huydoan06@gmail.com",
     telegram: "DHUYHEHE"              // shown as t.me/DHUYHEHE
   },
 
-  // ---- Sample pricing (DRAFT) ----
-  pricingNote: "Sample pricing — subject to change",
+  // ---- Pricing (approved) ----
+  pricingNote: "",                    // optional small label above pricing; "" = hidden
+  // Founding trial: discounted setup for the first N businesses, in exchange for a testimonial/review.
+  // Set to null to remove the offer everywhere (page + chatbot).
+  trial: { setup: 149, spots: 3 },
   currency: "$",
   plans: [
     {
