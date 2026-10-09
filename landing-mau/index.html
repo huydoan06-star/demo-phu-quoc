@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Huy Demo — Hải sản nướng Dương Đông, Phú Quốc (Trang mẫu)</title>
+<meta name="description" content="Huy Demo: quán hải sản nướng than hồng ở Dương Đông, Phú Quốc. Đây là trang mẫu minh hoạ landing page cho tiệm nhỏ.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#1d1610">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:title" content="Huy Demo — Hải sản nướng than hồng · Phú Quốc">
+<meta property="og:description" content="Trang mẫu landing page: thực đơn, đặt món qua Telegram, QR chuyển khoản, bản đồ, nút Zalo.">
+<meta property="og:url" content="https://huydoan06-star.github.io/demo-phu-quoc/landing-mau/">
+<meta property="og:image" content="https://huydoan06-star.github.io/demo-phu-quoc/landing-mau/assets/og.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Huy Demo — hải sản nướng than hồng, Phú Quốc">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://huydoan06-star.github.io/demo-phu-quoc/landing-mau/assets/og.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,500;0,800;1,400;1,700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/hero-m.webp" media="(max-width:760px)">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="mast">
+  <a class="mast__name" href="#top">Huy Demo</a>
+  <span class="badge" title="Đây là trang mẫu, không phải tiệm thật">Trang mẫu</span>
+  <nav class="mast__nav"><a href="#mon">Thực đơn</a><a href="#vi-sao">Vì sao</a><a href="#anh">Ảnh</a><a href="#dat">Đặt món</a></nav>
+</header>
+
+<main id="top">
+<!-- 1. HERO -->
+<section class="hero">
+  <div class="hero__media" data-parallax>
+    <picture>
+      <source media="(max-width:760px)" srcset="assets/hero-m.webp">
+      <img src="assets/hero.webp" alt="Huy Demo — bàn ăn ven biển lúc hoàng hôn ở Phú Quốc" width="1600" height="1000" fetchpriority="high">
+    </picture>
+  </div>
+  <div class="hero__veil"></div>
+  <div class="hero__text">
+    <p class="kicker reveal">Số 01 · Mùa gió chướng · Dương Đông</p>
+    <h1 class="hero__title"><span class="line"><span>Huy</span></span><span class="line"><em>Demo</em></span></h1>
+    <p class="hero__lede reveal">Hải sản nướng than hồng — ghe về lúc sáng, lên bếp lúc chiều, ăn khi biển còn đỏ nắng.</p>
+    <a class="btn btn--zalo reveal" data-link="zalo" href="#">Nhắn Zalo <span aria-hidden="true">→</span></a>
+  </div>
+  <a class="hero__scroll" href="#mon" aria-label="Cuộn xuống thực đơn"><span></span></a>
+</section>
+
+<div class="ticker-wrap"><div class="ticker" aria-hidden="true"><div class="ticker__track">
+  <span>Ghẹ Hàm Ninh</span><i>✺</i><span>Sò điệp mỡ hành</span><i>✺</i><span>Tiêu đỏ Phú Quốc</span><i>✺</i><span>Nướng than hồng</span><i>✺</i><span>Mở cửa tới khuya</span><i>✺</i>
+  <span>Ghẹ Hàm Ninh</span><i>✺</i><span>Sò điệp mỡ hành</span><i>✺</i><span>Tiêu đỏ Phú Quốc</span><i>✺</i><span>Nướng than hồng</span><i>✺</i><span>Mở cửa tới khuya</span><i>✺</i>
+</div></div></div>
+
+<!-- 2. PRODUCTS -->
+<section class="sec menu" id="mon">
+  <header class="sec__head">
+    <span class="sec__no">01</span>
+    <h2 class="reveal">Thực đơn <em>hôm nay</em></h2>
+    <p class="reveal">Giá theo phần, đã gồm nước chấm muối ớt xanh nhà làm. Hải sản theo mùa, hết là hết.</p>
+  </header>
+  <div class="menu__grid" id="menuGrid"></div>
+</section>
+
+<!-- 3. WHY -->
+<section class="sec why" id="vi-sao">
+  <div class="why__img reveal"><img src="assets/why.webp" alt="Huy Demo — góc bàn ăn nhìn ra biển" loading="lazy" width="700" height="875"><span class="why__stamp">Từ ghe<br>tới bếp</span></div>
+  <div class="why__body">
+    <header class="sec__head"><span class="sec__no">02</span><h2 class="reveal">Vì sao chọn <em>tiệm</em></h2></header>
+    <ol class="why__list">
+      <li class="reveal"><b>Tươi trong ngày</b><span>Hải sản lấy từ ghe cảng An Thới mỗi sáng. Không trữ đông qua đêm.</span></li>
+      <li class="reveal"><b>Nướng than, không vội</b><span>Than củi đước, quạt tay. Mỗi món nướng riêng, ra bàn còn xèo xèo.</span></li>
+      <li class="reveal"><b>Giá ghi rõ, cân trước mặt</b><span>Không “giá thời giá”. Món theo ký được cân ngay tại quầy cho khách xem.</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- 4. GALLERY -->
+<section class="sec gal" id="anh">
+  <header class="sec__head">
+    <span class="sec__no">03</span>
+    <h2 class="reveal">Ảnh <em>quanh tiệm</em></h2>
+    <p class="reveal note">Ảnh mẫu minh hoạ — khi dùng thật sẽ thay bằng ảnh do tiệm chụp. Trang mẫu không đăng đánh giá khách hàng giả.</p>
+  </header>
+  <div class="gal__grid">
+    <figure class="g g--wide reveal"><img src="assets/g1.webp" alt="Huy Demo — ghe nằm trên bãi cát Phú Quốc" loading="lazy" width="900" height="675"><figcaption>Bãi sau quán, 6 giờ sáng</figcaption></figure>
+    <figure class="g g--tall reveal"><img src="assets/g2.webp" alt="Huy Demo — thuyền đánh cá trên biển" loading="lazy" width="600" height="800"><figcaption>Ghe về</figcaption></figure>
+    <figure class="g g--tall reveal"><img src="assets/g4.webp" alt="Huy Demo — khách ngồi ăn ven biển lúc hoàng hôn" loading="lazy" width="600" height="800"><figcaption>Giờ vàng</figcaption></figure>
+    <figure class="g g--wide reveal"><img src="assets/g3.webp" alt="Huy Demo — thùng cá trên bãi biển" loading="lazy" width="900" height="560"><figcaption>Chợ cá sớm</figcaption></figure>
+    <figure class="g g--tall reveal"><img src="assets/g5.webp" alt="Huy Demo — thuyền thúng trên cầu cảng" loading="lazy" width="600" height="800"><figcaption>Thuyền thúng</figcaption></figure>
+    <figure class="g g--tall reveal"><img src="assets/g6.webp" alt="Huy Demo — bàn ăn bày sẵn" loading="lazy" width="600" height="800"><figcaption>Bàn đã dọn</figcaption></figure>
+  </div>
+</section>
+
+<!-- 5. ORDER -->
+<section class="sec order" id="dat">
+  <div class="order__card">
+    <header class="sec__head"><span class="sec__no">04</span><h2 class="reveal">Đặt món <em>mang về</em></h2>
+      <p class="reveal">Nhắn bot Telegram tên món + giờ lấy. Chuyển khoản trước qua QR, tới nơi lấy liền — không chờ.</p></header>
+    <ol class="steps reveal"><li>Chọn món</li><li>Nhắn bot</li><li>Quét QR</li><li>Tới lấy</li></ol>
+    <div class="order__row">
+      <a class="btn btn--tg" data-link="telegram" href="#" target="_blank" rel="noopener">Mở bot Telegram <span aria-hidden="true">↗</span></a>
+      <a class="btn btn--ghost" data-link="zalo" href="#">Hoặc nhắn Zalo</a>
+    </div>
+  </div>
+  <figure class="qr reveal">
+    <img src="assets/qr-mau.png" alt="QR mẫu VietQR của Huy Demo — không phải tài khoản thật" loading="lazy" width="520" height="600">
+    <figcaption><b>QR mẫu</b> · chỉ để minh hoạ, không chuyển tiền vào mã này.</figcaption>
+  </figure>
+</section>
+</main>
+
+<!-- 6. FOOTER -->
+<footer class="foot">
+  <div class="foot__map reveal">
+    <iframe title="Bản đồ Huy Demo — Dương Đông, Phú Quốc" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+      src="https://www.google.com/maps?q=D%C6%B0%C6%A1ng%20%C4%90%C3%B4ng%2C%20Ph%C3%BA%20Qu%E1%BB%91c%2C%20Ki%C3%AAn%20Giang&z=15&output=embed"></iframe>
+  </div>
+  <div class="foot__info">
+    <p class="foot__name">Huy Demo</p>
+    <dl>
+      <dt>Địa chỉ</dt><dd>Khu vực Dương Đông, TP. Phú Quốc <small>(địa chỉ minh hoạ)</small></dd>
+      <dt>Giờ mở cửa</dt><dd>Hằng ngày 15:00 – 23:00</dd>
+      <dt>Điện thoại</dt><dd><a data-link="phone" data-text="phoneText" href="#"></a></dd>
+    </dl>
+    <p class="foot__fine">Trang mẫu landing page — tên tiệm, món, giá và ảnh là nội dung minh hoạ.</p>
+  </div>
+</footer>
+
+<!-- 7. FLOATING ZALO -->
+<a class="fab" data-link="zalo" href="#" aria-label="Nhắn Zalo cho Huy Demo"><span>Zalo</span></a>
+
+<script src="main.js" defer></script>
+</body>
+</html>
